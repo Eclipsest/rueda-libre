@@ -18,3 +18,15 @@ ex: permite definir colores acuerdo a las bicicletas, y que estas mismas se pued
 JAVASCRIPT Define el comportamiento de la pagina
 ex: permite que el usuario elija la bicicleta que desee, pueda ver especificaciones, indique cuantos dias la va a alquilar y de acuerdo a los dias
 el sitio le muestre el valor de alquiler.
+
+##
+Tabla de rutas internas utilizadas
+Archivo de origen	Destino	Ruta escrita
+index.html	paginas/tarifas.html	paginas/tarifas.html
+index.html	paginas/reservas.html	paginas/reservas.html
+index.html	seccion Encuentranos (#encuentranos)	#encuentranos
+index.html	tabla de recorridos en paginas/tarifas.html	paginas/tarifas.html#Tabla recorridos
+paginas/tarifas.html	index.html	../index.html
+paginas/tarifas.html	paginas/reservas.html	reservas.html
+paginas/reservas.html	index.html	../index.html
+paginas/reservas.html	paginas/tarifas.html	tarifas.html
