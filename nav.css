@@ -1,0 +1,22 @@
+.menu {
+   ul {
+display: grid;
+grid-template-columns: auto auto auto;
+grid-template-rows: 50px;
+border: 1px solid #ccc;
+}
+li {
+display: grid;
+justify-content: center;
+align-items: center;
+border: 1px solid #ccc;
+resize: both;
+}
+}
+.menu-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: hsl(252, 12%, 67%);
+}
