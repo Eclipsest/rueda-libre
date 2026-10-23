@@ -3,32 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservas</title>
-    <link rel="stylesheet" href="../nav.css">
+    <title>Reservas | Rueda Libre</title>
+    <link rel="stylesheet" href="../style_prueba.css">
 </head>
-   
 <body>
-
-  <header>
-        <nav class="menu">
-            <ul class="menu-list">  
-               <li><a href="../index.html">ir a inicio</a></li>
-                <li><a href="tarifas.html">ir a tarifas</a></li>
-                <li><a href="reservas.html">ir a reservas</a></li>
+    <header>
+        <a class="site-brand" href="../index.html">Rueda Libre</a>
+        <nav class="menu" aria-label="Navegación principal">
+            <ul class="menu-list">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="tarifas.html">Tarifas</a></li>
+                <li><a href="reservas.html" aria-current="page">Reservas</a></li>
             </ul>
         </nav>
     </header>
-    <h1>Reserva tu bicicleta</h1>
-    <p><a href="mailto:reservaspersonal@ruedalibre.com">Contactar por correo electrónico</a></p>
-    <h3>Horario de atencion</h3>
-    <dl>
-        <dt>Lunes a Viernes:</dt>
-        <dd>7:00 AM - 7:00 PM</dd>
-        <dt>Sábados, Domingos y Festivos:</dt>
-        <dd>6:00 AM - 2:00 PM</dd>
-    </dl>
+
+    <main>
+        <section class="form-page" aria-labelledby="titulo-reserva">
+            <form class="formulario" method="post">
+                <h1 id="titulo-reserva">Formulario de reserva</h1>
+                <p class="form-intro">Completa tus datos y cuéntanos qué bicicleta quieres reservar.</p>
+
+                <fieldset class="form-group">
+                    <legend>Tus datos</legend>
+                    <label class="form-field" for="nombre">
+                        Nombre
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre y apellidos" autocomplete="name" required>
+                    </label>
+
+                    <label class="form-field" for="email">
+                        Correo electrónico
+                        <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" autocomplete="email" required>
+                    </label>
+
+                    <label class="form-field" for="telefono">
+                        Teléfono
+                        <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono" autocomplete="tel" required>
+                    </label>
+
+                    <label class="form-field" for="documento">
+                        Documento de identidad
+                        <input type="text" id="documento" name="documento" autocomplete="off" required>
+                    </label>
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <legend>Tu alquiler</legend>
+                    <label class="form-field" for="bicicleta">
+                        Tipo de bicicleta
+                        <select id="bicicleta" name="bicicleta" required>
+                            <option value="" selected disabled>Selecciona una bicicleta</option>
+                            <option value="urbana">Urbana</option>
+                            <option value="montana">Montaña</option>
+                            <option value="electrica">Eléctrica</option>
+                        </select>
+                    </label>
+
+                    <label class="form-field" for="fecha">
+                        Fecha de reserva
+                        <input type="date" id="fecha" name="fecha" required>
+                    </label>
+
+                    <fieldset class="choice-group">
+                        <legend>Duración del alquiler</legend>
+                        <label class="choice-option" for="duracion-hora">
+                            <input type="radio" id="duracion-hora" name="duracion" value="1-hora" required>
+                            1 hora
+                        </label>
+                        <label class="choice-option" for="duracion-medio-dia">
+                            <input type="radio" id="duracion-medio-dia" name="duracion" value="medio-dia">
+                            Medio día (4 horas)
+                        </label>
+                        <label class="choice-option" for="duracion-dia">
+                            <input type="radio" id="duracion-dia" name="duracion" value="dia-completo">
+                            Día completo
+                        </label>
+                    </fieldset>
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <legend>Confirmación</legend>
+                    <label class="choice-option" for="confirmacion">
+                        <input type="checkbox" id="confirmacion" name="confirmacion" value="acepto" required>
+                        Confirmo que los datos de la reserva son correctos.
+                    </label>
+
+                    <label class="form-field" for="comentario">
+                        Detalles adicionales <small>(opcional)</small>
+                        <textarea id="comentario" name="comentario" placeholder="Indica el horario u otra información"></textarea>
+                    </label>
+                </fieldset>
+
+                <button type="submit">Solicitar reserva</button>
+            </form>
+        </section>
+
+        <aside class="reservation-hours" aria-labelledby="horario-atencion">
+            <h2 id="horario-atencion">Horario de atención</h2>
+            <dl>
+                <dt>Lunes a viernes:</dt>
+                <dd>7:00 a. m. - 7:00 p. m.</dd>
+                <dt>Sábados, domingos y festivos:</dt>
+                <dd>6:00 a. m. - 2:00 p. m.</dd>
+            </dl>
+        </aside>
+    </main>
+
     <footer>
-        <p>&copy; 2026 Rueda libre <a href="mailto:info@ruedalibre.com">info@ruedalibre.com</a></p>
+        <p>¿Tienes alguna pregunta? <a href="mailto:reservaspersonal@ruedalibre.com">Contáctanos por correo</a>.</p>
+        <p>&copy; 2026 Rueda Libre <a href="mailto:info@ruedalibre.com">info@ruedalibre.com</a></p>
     </footer>
 </body>
 </html>

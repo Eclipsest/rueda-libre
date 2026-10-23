@@ -3,75 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Contacto</title>
+    <title>Formulario de contacto | Rueda Libre</title>
     <link rel="stylesheet" href="style_prueba.css">
 </head>
-    
 <body>
-    <nav class="menu">
+    <nav class="menu" aria-label="Navegación principal">
         <ul class="menu-list">
             <li><a href="index.html">Inicio</a></li>
             <li><a href="paginas/tarifas.html">Tarifas</a></li>
             <li><a href="paginas/reservas.html">Reservas</a></li>
-
         </ul>
     </nav>
-       <form>
 
-            <div class="formulario">
-            <legend>
-                <h1>formulario de contacto</h1>
-                <br>
-            </legend>
-            <div class="name">
-            <p>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="" placeholder="Nombre(s) y apellidos" required ; style="width: 100%;"; color: white; border-radius: 5px; padding: 5px; border: 0px solid #ccc;">
-                <br>
-                <br>
-            </p>
-            </div>
-            <div class="mail">
-            <p>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Ingrese su correo electronico" required; style="width: 100%;"; color: white; border-radius: 5px; padding: 5px; border: 0px solid #ccc;">
-                 <br>
-                <br>
+    <main class="form-page">
+        <form class="formulario">
+            <h1>Formulario de contacto</h1>
+            <p class="form-intro">Déjanos tus datos y cuéntanos cómo podemos ayudarte.</p>
 
-            </p>
-            </div>
-            <div class="telefono">
-            <p>
-                <Label for="telefono"> telefono:</Label>
-                <input type="tel" id="telefono" name="telefono" placeholder="3138909102 por ejemplo" required ; style="width: 100%;"; color: white; border-radius: 5px; padding: 5px; border: 0px solid #ccc;">
-                <br>
-                <br>
-            </p>
-            </div>
-            <div class="documento">
-            <p>
-                <label for="documento"> documento:</label>
-                <input type="number" id="documento" name="documento" placeholder="C.C, T.I" required ; style="width: 100%;"; color: white; border-radius:10px; padding:10px; border:10px solid #ccc;">
-                <br>
-                <br>
-            </p>
-            </div>
-            <div class="comentario" style="width: 100%;color: white;">
-                <label for="comentario">Comentario:</label>
-                <textarea id="comentario" name="comentario" placeholder="Ingrese su comentario" class="comentario"></textarea>
-                <br>
-                <br>
-            </div>
-            <br>
-            <br>
-            <br>
-            <div style="text-align: center; color: white; width: 100%;">   
-                <button type="submit" class="btn btn-primary", style="background-color: hwb(224 13% 25% / 0.877); border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
-                    enviar
-                </button>
-            </div>
-            
-    </form>
+            <label class="form-field" for="nombre">
+                Nombre
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre y apellidos" autocomplete="name" required>
+            </label>
 
+            <label class="form-field" for="email">
+                Correo electrónico
+                <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" autocomplete="email" required>
+            </label>
+
+            <label class="form-field" for="telefono">
+                Teléfono
+                <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono" autocomplete="tel" required>
+            </label>
+
+            <label class="form-field" for="documento">
+                Documento de identidad
+                <input type="text" id="documento" name="documento" placeholder="C.C. o T.I." autocomplete="off" required>
+            </label>
+
+            <label class="form-field" for="comentario">
+                Comentario <small>(opcional)</small>
+                <textarea id="comentario" name="comentario" placeholder="Escribe tu comentario"></textarea>
+            </label>
+
+            <button type="submit">Enviar mensaje</button>
+        </form>
+    </main>
 </body>
 </html>

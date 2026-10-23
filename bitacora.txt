@@ -30,3 +30,9 @@ paginas/tarifas.html	index.html	../index.html
 paginas/tarifas.html	paginas/reservas.html	reservas.html
 paginas/reservas.html	index.html	../index.html
 paginas/reservas.html	paginas/tarifas.html	tarifas.html
+
+## Uso de elementos semánticos
+Los contenedores `div` que agrupaban la etiqueta y su control fueron reemplazados por `label`, que asocia cada campo con su nombre. El `div` usado como envoltorio del formulario de reservas se reemplazó por una `section` identificada por el título "Reserva tu bicicleta". Los `span` que indicaban que un campo era opcional se reemplazaron por `small`, apropiado para texto secundario.
+
+## Formulario de reserva
+El correo usa `type="email"` para validar una dirección con formato de correo; el tipo de bicicleta usa un `select` porque se elige una opción de una lista cerrada; la duración usa botones `radio` porque las opciones son mutuamente excluyentes. La confirmación usa una casilla obligatoria para registrar la aceptación explícita, y los detalles adicionales se recogen con un área de texto para permitir respuestas libres.
