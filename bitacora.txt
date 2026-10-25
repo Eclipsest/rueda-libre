@@ -50,3 +50,30 @@ Fecha de alquiler - Fecha, Deja escoger la fecha mas comodamente.
 6	Fecha de alquiler	Una fecha pasada | Solo permite desde el 1 de noviembre y el 31 de diciembre de 2026.
 7	Fecha alquiler Vacia | Es obligatorio elegir la fecha de alquiler
 8	Nombre	Vacío | Es obligatorio llenar el area de nombre.
+## 1. Auditoría de contraste de colores
+
+| Combinación de colores | Contraste | Clasificación |
+
+| Blanco sobre Verde Ruta | 5,31:1 | Apta para texto normal |
+| Blanco sobre Naranja Pedal | 2,22:1 | No apta |
+| Azul Noche sobre Naranja Pedal | 7,20:1 | Apta para texto normal |
+| Azul Noche sobre Crema | 14,83:1 | Apta para texto normal |
+| Gris Asfalto sobre Crema | 5,57:1 | Apta para texto normal |
+| Verde Ruta sobre Crema | 4,93:1 | Apta para texto normal |
+| Naranja Pedal sobre Crema | 2,06:1 | No apta |
+| Blanco sobre Azul Noche | 15,97:1 | Apta para texto normal |
+
+Como resultado, seis combinaciones son aptas para texto normal y dos no cumplen el contraste mínimo. Se recomienda evitar el texto blanco sobre naranja y el texto naranja sobre crema, utilizando Azul Noche como alternativa para mejorar la legibilidad.
+
+## 2. Mapa de uso de color
+
+| Elemento | Color recomendado | Uso |
+
+| Fondo general | Crema `#FAF6EF` | Fondo principal de las páginas |
+| Títulos | Azul Noche `#14213D` | Encabezados y títulos |
+| Botones principales | Verde Ruta `#1E7A4F` con texto blanco | Acciones principales |
+| Botones secundarios | Naranja Pedal `#F39A2B` con texto Azul Noche | Acciones secundarias |
+| Enlaces | Verde Ruta `#1E7A4F` | Navegación y enlaces de contenido |
+| Texto secundario | Gris Asfalto `#5B6470` | Descripciones y textos complementarios |
+
+Se concluyó que el Azul Noche, el Verde Ruta y el Gris Asfalto ofrecen buen contraste sobre el fondo crema. El naranja se utilizará principalmente en botones secundarios y elementos destacados, con texto Azul Noche para garantizar una mejor legibilidad.
