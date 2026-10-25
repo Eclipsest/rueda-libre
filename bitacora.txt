@@ -36,3 +36,17 @@ Los contenedores `div` que agrupaban la etiqueta y su control fueron reemplazado
 
 ## Formulario de reserva
 El correo usa `type="email"` para validar una dirección con formato de correo; el tipo de bicicleta usa un `select` porque se elige una opción de una lista cerrada; la duración usa botones `radio` porque las opciones son mutuamente excluyentes. La confirmación usa una casilla obligatoria para registrar la aceptación explícita, y los detalles adicionales se recogen con un área de texto para permitir respuestas libres.
+##
+Control-etiqueta.
+Cantidad de bicicletas- Lista desplegable, Como las opciones las ofrece la pagina tarifas, se le da a escoger entre las 3 disponibles.
+Comentario - Textarea, Opcional, deja escribir lo que quiera al usuario
+Fecha de alquiler - Fecha, Deja escoger la fecha mas comodamente.
+## Pruebas form
+1	Nombre	an    | El minimo de letras debe ser 3 ex: Ana
+2	Correo electrónico juan@ | 1. Debe ser un correo valido
+3	Correo electrónico	juan.com |1. Es decir, juan@gmail
+4	Correo electrónico	Vacío | Es un campo obligatorio
+5	Teléfono	12345 | Debe empezar por 3
+6	Fecha de alquiler	Una fecha pasada | Solo permite desde el 1 de noviembre y el 31 de diciembre de 2026.
+7	 Fecha alquiler Vacia | Es obligatorio elegir la fecha de alquiler
+8	Nombre	Vacío | Es obligatorio llenar el area de nombre.
