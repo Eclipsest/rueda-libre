@@ -36,3 +36,31 @@ Los contenedores `div` que agrupaban la etiqueta y su control fueron reemplazado
 
 ## Formulario de reserva
 El correo usa `type="email"` para validar una dirección con formato de correo; el tipo de bicicleta usa un `select` porque se elige una opción de una lista cerrada; la duración usa botones `radio` porque las opciones son mutuamente excluyentes. La confirmación usa una casilla obligatoria para registrar la aceptación explícita, y los detalles adicionales se recogen con un área de texto para permitir respuestas libres.
+
+## Pruebas de validación del formulario de reserva
+
+Se probaron los envíos con la validación nativa del navegador. En los casos bloqueados, el evento de envío no se ejecutó; para evitar enviar información a un servidor, los intentos válidos se interceptaron en el navegador.
+
+| Campo | Dato de prueba | Resultado esperado | Resultado obtenido |
+|---|---|---|---|
+| Nombre | Vacío | Bloquear el envío por ser obligatorio. | Bloqueado; el navegador indicó que se debe completar el campo. |
+| Nombre | `Al` (2 caracteres) | Bloquear el envío por tener menos de 3 caracteres. | Bloqueado; se detectó longitud menor al mínimo. |
+| Documento | Vacío | Bloquear el envío por ser obligatorio. | Bloqueado; se detectó el campo requerido. |
+| Documento | `12A456` | Bloquear el envío por incluir caracteres no numéricos. | Bloqueado; no coincide con el patrón de dígitos. |
+| Documento | `12345` (5 dígitos) | Bloquear el envío por tener menos de 6 dígitos. | Bloqueado; se detectó longitud menor al mínimo. |
+| Documento | `12345678901` (11 dígitos) | Aceptar como máximo 10 dígitos y no permitir caracteres adicionales. | El navegador limitó el valor a `1234567890` (10 dígitos); el envío de prueba continuó. |
+| Correo electrónico | Vacío | Bloquear el envío por ser obligatorio. | Bloqueado; se detectó el campo requerido. |
+| Correo electrónico | `correo-invalido` | Bloquear el envío por no tener formato de correo. | Bloqueado; se indicó que falta el formato válido de correo. |
+| Teléfono | Vacío | Bloquear el envío por ser obligatorio. | Bloqueado; se detectó el campo requerido. |
+| Teléfono | `4123456789` | Bloquear el envío porque no comienza por 3. | Bloqueado; no coincide con el patrón solicitado. |
+| Teléfono | `312345678` (9 dígitos) | Bloquear el envío por tener menos de 10 dígitos. | Bloqueado; se detectó longitud menor al mínimo. |
+| Teléfono | `31234567891` (11 dígitos) | Aceptar como máximo 10 dígitos y no permitir caracteres adicionales. | El navegador limitó el valor a `3123456789` (10 dígitos); el envío de prueba continuó. |
+| Fecha de alquiler | Vacía | Bloquear el envío por ser obligatoria. | Bloqueado; se detectó el campo requerido. |
+| Fecha de alquiler | `2026-10-31` | Bloquear el envío por ser anterior al mínimo `2026-11-01`. | Bloqueado; se indicó que la fecha debe ser igual o posterior al mínimo. |
+| Fecha de alquiler | `2027-01-01` | Bloquear el envío por superar el máximo `2026-12-31`. | Bloqueado; se indicó que la fecha debe ser igual o anterior al máximo. |
+| Tipo de bicicleta | Sin seleccionar | Bloquear el envío por ser obligatorio. | Bloqueado; el navegador solicitó seleccionar una opción. |
+| Cantidad de bicicletas | Sin seleccionar | Bloquear el envío por ser obligatorio. | Bloqueado; el navegador solicitó seleccionar una opción. |
+| Plan | Ninguna opción seleccionada | Bloquear el envío por ser obligatorio. | Bloqueado; se detectó que no se seleccionó una opción del grupo. |
+| Recorrido guiado | Sin seleccionar | Bloquear el envío por ser obligatorio. | Bloqueado; el navegador solicitó seleccionar una opción. |
+| Aceptación de políticas | Casilla sin marcar | Bloquear el envío por ser obligatoria. | Bloqueado; el navegador solicitó marcar la casilla. |
+| Detalles adicionales | 301 caracteres | Limitar el contenido a 300 caracteres. | El navegador limitó el texto a 300 caracteres; el envío de prueba continuó. |
