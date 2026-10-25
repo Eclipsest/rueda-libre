@@ -10,8 +10,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
-<body>  
-    <header>
+<body>
+    <header class="site-header">
         <a class="site-brand" href="index.html">Rueda Libre</a>
         <nav class="menu" aria-label="Navegación principal">
             <ul class="menu-list" id="menu">
@@ -21,29 +21,50 @@
                 <li><a href="form.html">Contacto</a></li>
             </ul>
         </nav>
-        <img src="./img/portada.jpg" alt="Portada2" width="300" height="50">
+        <img src="./img/portada.jpg" alt="Logotipo de Rueda Libre" width="300" height="50">
     </header>
 
     <main>
-    <h1>Alquiler de bicicletas en Medellín</h1>
-    <p>Bienvenido a Rueda Libre, tu solución para alquilar bicicletas en Medellín.</p>
-    <a class="cta-button" href="paginas/reservas.html">Reservar ahora</a>
+    <section class="home-hero" aria-labelledby="titulo-inicio">
+        <h1 id="titulo-inicio">Alquiler de bicicletas en Medellín</h1>
+        <p>Bienvenido a Rueda Libre, tu solución para alquilar bicicletas en Medellín.</p>
+        <a class="cta-button" href="paginas/reservas.html">Reservar ahora</a>
+    </section>
     <section>
         <h2>¿Quién somos?</h2>
         <p>Rueda Libre es una empresa dedicada al alquiler de bicicletas en Medellín, </p>
      <a href="#encuentranos">Encuéntranos aquí</a>.
 </section>
-<section>
+<section class="services">
     <h2>Nuestros servicios</h2>
-    <h3>Alquiler de bicicletas </h3>
-    <article><p>Ofrecemos una amplia variedad de bicicletas para alquilar, desde bicicletas de montaña hasta bicicletas urbanas, <mark>Incluye Casco y Candado</mark> </p></article>
-    <img src="./img/images.jpeg" alt="Bicicletas" width="300" height="200">
-    <h3>Recorridos guiados</h3>
-    <article><p>Ofrecemos recorridos guiados por la ciudad de Medellín, donde <mark>podrás conocer los lugares más emblemáticos y disfrutar de la ciudad en bicicleta.</mark></p></article>
-    <img src="./img/ruta.jpeg" alt="Portada2" width="300" height="200"><br>
-    <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">
-    Ver ubicación en el mapa</a>
-    <br><a href="paginas/tarifas.html#Tabla recorridos">Ver tarifas</a>
+    <div class="service-grid">
+        <article class="service-card">
+            <h3>Alquiler de bicicletas</h3>
+            <p>Ofrecemos una amplia variedad de bicicletas para alquilar, desde bicicletas de montaña hasta bicicletas urbanas. <mark>Incluye casco y candado.</mark></p>
+            <img class="bike-image" src="./img/images.jpeg" alt="Bicicletas disponibles para alquilar">
+            <img class="bike-image" src="./img/bici-urbana.jpg" alt="Bicicletas disponibles para alquilar">
+            <img class="bike-image" src="./img/bici-ciclista.jpg" alt="Bicicletas disponibles para alquilar">
+        </article>
+            
+        <article class="service-card service-card--new">
+            <span class="new-badge">Nuevo</span>
+            <h3>Bicicletas eléctricas</h3>
+            <p>Recorre Medellín con asistencia eléctrica y disfruta de trayectos más cómodos.</p>
+            <img class="bike-image" src="./img/bici-electrica.jpg" alt="Bicicleta eléctrica disponible para alquilar">
+            <img class="bike-image" src="./img/electrica.jpg" alt="Bicicleta eléctrica disponible para alquilar">
+            <img class="bike-image" src="./img/elect-noche.jpg" alt="Bicicleta eléctrica disponible para alquilar">
+        </article>
+        <article class="service-card">
+            <h3>Recorridos guiados</h3>
+            <p>Ofrecemos recorridos guiados por la ciudad de Medellín para conocer sus lugares más emblemáticos y disfrutar la ciudad en bicicleta.</p>
+            <img src="./img/ruta.jpeg" alt="Recorrido guiado en bicicleta" width="300" height="200">
+            <img src="./img/mapa-ciclovia.webp" alt="Recorrido guiado mapa" width="300" height="400">
+            <div class="service-card-actions">
+                <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">Ver ubicación en el mapa</a>
+                <a href="paginas/tarifas.html#Tarifas-bicicletas">Ver tarifas</a>
+            </div>
+        </article>
+    </div>
 </section>
 <section>
     <h2>¿Como alquilar?</h2>
@@ -70,8 +91,9 @@
     </ul>
 </section>
     </main>
+    <a class="whatsapp-link" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
     <footer>
-        <p>&copy; 2026 Rueda libre <a href="mailto:info@ruedalibre.com">info@ruedalibre.com</a></p>
+        <p>&copy; 2026 Rueda Libre <a href="mailto:info@ruedalibre.com">info@ruedalibre.com</a></p>
     </footer>
 
 </body>

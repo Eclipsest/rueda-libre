@@ -14,18 +14,41 @@
     --spacing-xl: 2rem;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
+    min-height: 100vh;
+    margin: 0;
+    padding-bottom: 5rem;
     background-color: var(--color-crema);
     color: var(--color-azul-noche);
     font-family: var(--font-body);
-    margin: 0;
-    min-height: 100vh;
 }
 
-h1, h2, h3, h4, h5, h6 {
+main {
+    width: 100%;
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+}
+
+main > section {
+    margin-block: var(--spacing-xl);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0.5rem 0;
     color: var(--color-azul-noche);
     font-family: var(--font-heading);
-    margin: 0.5rem 0;
 }
 
 a {
@@ -38,15 +61,80 @@ a {
     transition: background-color 160ms ease, color 160ms ease;
 }
 
-a:hover {
+a:hover,
+.menu-list a[aria-current="page"] {
     background-color: var(--color-naranja-pedal);
     color: var(--color-azul-noche);
+}
+
+a:hover {
     text-decoration: underline;
 }
 
-a:focus-visible {
-    outline: 2px solid var(--color-naranja-pedal);
+a:focus-visible,
+.formulario button:focus-visible {
+    outline: 3px solid var(--color-azul-noche);
     outline-offset: 3px;
+}
+
+/* Shared site header and navigation */
+.site-brand {
+    display: block;
+    padding: 0.9rem 1rem 0.4rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.site-header > img {
+    display: block;
+    width: 100%;
+    max-height: 12rem;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.menu {
+    background-color: var(--color-azul-noche);
+    border-bottom: 1px solid var(--color-gris-asfalto);
+}
+
+.menu-list {
+    max-width: 1100px;
+    min-height: 64px;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    list-style: none;
+    text-align: center;
+}
+
+.menu-list li {
+    display: inline-block;
+    margin: 0.25rem;
+    vertical-align: middle;
+}
+
+.menu-list a {
+    display: block;
+    padding: 0.7rem 1.15rem;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+/* Home page and service cards */
+.home-hero {
+    display: flex;
+    min-height: 50vh;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: var(--spacing-md);
+    padding-block: var(--spacing-xl);
+}
+
+.home-hero h1,
+.home-hero p {
+    margin: 0;
 }
 
 .cta-button {
@@ -69,86 +157,130 @@ a:focus-visible {
     transform: translateY(1px);
 }
 
-.cta-button:focus-visible {
-    outline: 3px solid var(--color-azul-noche);
-    outline-offset: 3px;
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+    gap: var(--spacing-lg);
 }
 
-.site-brand {
-    display: block;
-    padding: 0.9rem 1rem 0.4rem;
-    font-size: 1.4rem;
-    font-weight: 700;
-    text-align: center;
-}
-
-.menu {
-    background-color: var(--color-azul-noche);
-    border-bottom: 1px solid var(--color-gris-asfalto);
-}
-
-.menu-list {
-    list-style: none;
+.service-card {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    max-width: 1100px;
-    min-height: 64px;
-    margin: 0 auto;
-    padding: 0.5rem 1rem;
-    box-sizing: border-box;
+    min-width: 0;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    border: 1px solid var(--color-gris-asfalto);
+    border-radius: 12px;
 }
 
-.menu-list li {
+.service-card h3,
+.service-card p {
     margin: 0;
 }
 
-.menu-list a {
+.service-card img {
     display: block;
-    padding: 0.7rem 1.15rem;
+    width: 100%;
+    height: 100%;
     border-radius: 8px;
+}
+
+.bike-image {
+    height: clamp(12rem, 30vw, 18rem);
+    object-fit: cover;
+    object-position: center;
+}
+
+.service-card--new {
+    position: relative;
+}
+
+.new-badge {
+    position: absolute;
+    z-index: 1;
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+    background-color: var(--color-naranja-pedal);
+    color: var(--color-azul-noche);
+    font-size: 0.875rem;
     font-weight: 700;
 }
 
-.menu-list a:hover {
-    background-color: var(--color-naranja-pedal);
+.service-card-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.service-card-actions a {
+    flex: 1;
+    text-align: center;
+}
+
+/* Pricing tables */
+table {
+    width: 100%;
+    margin-block: var(--spacing-md);
+    border-collapse: collapse;
     color: var(--color-azul-noche);
 }
 
+caption {
+    margin-bottom: var(--spacing-sm);
+    font-weight: 700;
+    text-align: left;
+}
+
+th,
+td {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid var(--color-gris-asfalto);
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+th {
+    background-color: var(--color-azul-noche);
+    color: #FFFFFF;
+}
+
+/* Reservation and contact forms */
 .form-page {
     display: flex;
     justify-content: center;
-    padding: 2rem 1rem 3rem;
+    padding: var(--spacing-xl) var(--spacing-md) 3rem;
 }
 
 .formulario {
-    background-color: var(--color-crema);
+    display: grid;
+    gap: var(--spacing-md);
+    width: min(100%, 34rem);
+    padding: clamp(1.25rem, 4vw, 2rem);
     border: 2px solid var(--color-gris-asfalto);
     border-radius: 16px;
-    padding: clamp(1.25rem, 4vw, 2rem);
-    width: min(100%, 34rem);
-    box-sizing: border-box;
+    background-color: var(--color-crema);
     color: var(--color-azul-noche);
 }
 
 .formulario h1 {
     margin: 0;
-    text-align: center;
     font-size: clamp(1.5rem, 5vw, 2rem);
+    text-align: center;
 }
 
 .form-intro {
     margin: 0.6rem 0 1.5rem;
-    text-align: center;
     color: var(--color-gris-asfalto);
+    text-align: center;
 }
 
 .form-group {
+    display: grid;
     min-width: 0;
-    margin: 0 0 1.25rem;
-    padding: 1rem;
+    gap: var(--spacing-md);
+    margin: 0;
+    padding: var(--spacing-md);
     border: 1px solid var(--color-gris-asfalto);
     border-radius: 10px;
 }
@@ -163,12 +295,8 @@ a:focus-visible {
 .form-field {
     display: grid;
     gap: 0.45rem;
-    margin-bottom: 1rem;
+    margin: 0;
     font-weight: 700;
-}
-
-.form-field:last-child {
-    margin-bottom: 0;
 }
 
 .form-field small {
@@ -184,7 +312,6 @@ a:focus-visible {
     padding: 0.75rem 0.85rem;
     border: 1px solid var(--color-gris-asfalto);
     border-radius: 7px;
-    box-sizing: border-box;
     background-color: var(--color-crema);
     color: var(--color-azul-noche);
     font: inherit;
@@ -235,8 +362,8 @@ a:focus-visible {
 .formulario button {
     display: block;
     width: 100%;
-    margin-top: 1.35rem;
-    padding: 0.8rem 1.25rem;
+    margin-top: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-xl);
     border: 0;
     border-radius: 7px;
     background-color: var(--color-verde-ruta);
@@ -244,7 +371,7 @@ a:focus-visible {
     font: inherit;
     font-weight: 700;
     cursor: pointer;
-    transition: transform 160ms ease;
+    transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
 }
 
 .formulario button:hover {
@@ -256,18 +383,12 @@ a:focus-visible {
     transform: translateY(1px);
 }
 
-.formulario button:focus-visible {
-    outline: 2px solid var(--color-naranja-pedal);
-    outline-offset: 3px;
-}
-
 .reservation-hours {
     max-width: 34rem;
     margin: 0 auto 2rem;
     padding: 1.25rem clamp(1.25rem, 4vw, 2rem);
     border: 1px solid var(--color-gris-asfalto);
     border-radius: 12px;
-    box-sizing: border-box;
     background-color: var(--color-crema);
     color: var(--color-azul-noche);
 }
@@ -288,46 +409,45 @@ a:focus-visible {
     margin: 0;
 }
 
+/* Shared footer and fixed contact link */
+.whatsapp-link {
+    position: fixed;
+    z-index: 10;
+    right: var(--spacing-md);
+    bottom: var(--spacing-md);
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--color-crema);
+    border-radius: 999px;
+    background-color: var(--color-verde-ruta);
+    color: #FFFFFF;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgb(20 33 61 / 25%);
+}
+
 footer {
     margin-top: 3rem;
     padding: 2rem clamp(1rem, 5vw, 3rem);
-    text-align: center;
-    color: var(--color-azul-noche);
-    background-color: var(--color-naranja-pedal);
     border-top: 1px solid var(--color-gris-asfalto);
-}
-
-footer h2,
-footer h3 {
-    margin: 0.5rem 0;
+    background-color: var(--color-naranja-pedal);
+    color: var(--color-azul-noche);
+    text-align: center;
 }
 
 footer p {
-    color: inherit;
-    margin: 0.75rem 0;
-}
-
-footer dl {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.35rem 1rem;
-    margin: 0.75rem 0;
-}
-
-footer dd {
     margin: 0;
-}
-
-footer p:last-child {
-    border-top: 1px solid var(--color-gris-asfalto);
-    margin: 1.5rem 0 0;
-    padding-top: 1rem;
 }
 
 footer a {
     margin: 0.1rem;
 }
-section a {
-    margin: 0.1rem 0;
+
+@media (max-width: 30rem) {
+    .service-card-actions {
+        flex-direction: column;
+    }
+
+    .whatsapp-link {
+        right: var(--spacing-sm);
+        bottom: var(--spacing-sm);
+    }
 }
