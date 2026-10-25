@@ -116,3 +116,5 @@ Durante esta semana desarrollé los 12 MiniRetos del proyecto Rueda Libre
 para que no se vea tan angosto, por otra parte desde mi punto personal mejoraria los estilos en css, pero ya recae un poco en mi por ser
 la primera vez entendiendo y jugando con css. aun asi, estoy contento con el resultado y que todas las interacciones que tiene el sitio no
 contienen ningun error, y son funcionales, y me siento comodo con el uso (aunque basico) de css.
+
+##Link: https://eclipsest.github.io/rueda-libre/
