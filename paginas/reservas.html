@@ -5,17 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservas | Rueda Libre</title>
     <link rel="stylesheet" href="../style_prueba.css">
+    <link rel="icon" href="../img/favicon.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="site-header">
         <a class="site-brand" href="../index.html">Rueda Libre</a>
         <nav class="menu" aria-label="Navegación principal">
-            <ul class="menu-list">
+            <ul class="menu-list" id="menu">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="tarifas.html">Tarifas</a></li>
-                <li><a href="reservas.html" aria-current="page">Reservas</a></li>
+                <li><a href="reservas.html" class="activo" aria-current="page">Reservas</a></li>
+                <li><a href="../form.html">Contacto</a></li>
             </ul>
         </nav>
+        <img src="../img/portada.jpg" alt="Logotipo de Rueda Libre" width="300" height="50">
     </header>
 
     <main>
@@ -32,7 +38,7 @@
                     </label>
                     <label class="form-field" for="documento">
                         Documento de identidad
-                        <input type="text" inputmode="numeric" pattern="[0-9]+" placeholder="Ej: 1040203756" requiredid="documento" name="documento" autocomplete="off" required minlength="6" maxlength="10" >
+                        <input type="text" inputmode="numeric" pattern="[0-9]+" placeholder="Ej: 1040203756" required id="documento" name="documento" autocomplete="off" required minlength="6" maxlength="10" >
                     </label>
 
                     <label class="form-field" for="email">
@@ -82,7 +88,7 @@
                     <label class="form-field" for="bicicleta">
                        <br>
                         Cantidad de Bicicletas
-                        <select id="bicicleta" name="bicicleta" required>
+                        <select id="bicicleta-cant" name="bicicleta" required>
                             <option value="" selected disabled>Selecciona la cantidad</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -105,9 +111,6 @@
                         </select>
                     </label>
                     </fieldset>
-
-                    
-
                 <fieldset class="form-group">
                     <legend>Confirmación</legend>
                     <label class="choice-option" for="confirmacion">
@@ -136,8 +139,8 @@
         </aside>
     </main>
 
+    <a class="whatsapp-link" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
     <footer>
-        <p>¿Tienes alguna pregunta? <a href="mailto:reservaspersonal@ruedalibre.com">Contáctanos por correo</a>.</p>
         <p>&copy; 2026 Rueda Libre <a href="mailto:info@ruedalibre.com">info@ruedalibre.com</a></p>
     </footer>
 </body>

@@ -86,4 +86,11 @@ Como resultado, seis combinaciones son aptas para texto normal y dos no cumplen 
 
 Se concluyó que el Azul Noche, el Verde Ruta y el Gris Asfalto ofrecen buen contraste sobre el fondo crema. El naranja se utilizará principalmente en botones secundarios y elementos destacados, con texto Azul Noche para garantizar una mejor legibilidad.
 
-Link: https://eclipsest.github.io/rueda-libre/
+## Comprobación de herencia CSS
+
+En la página local `paginas/tarifas.html`, se compararon los estilos computados del `body` y del primer párrafo de `main` en el navegador:
+
+| `color` | Sí hereda| `rgb(20, 33, 61)` (Azul Noche) | `rgb(20, 33, 61)` (Azul Noche) |
+| `margin-top` | No hereda | `0px` | `16px` |
+
+El párrafo hereda el color de texto definido en `body`. En cambio, su margen superior conserva el valor propio del párrafo y no toma el `margin: 0` del cuerpo.
