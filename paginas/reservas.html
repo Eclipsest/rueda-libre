@@ -28,7 +28,11 @@
                     <legend>Tus datos</legend>
                     <label class="form-field" for="nombre">
                         Nombre
-                        <input type="text" id="nombre" name="nombre" placeholder="Nombre y apellidos" autocomplete="name" required>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre y apellidos" autocomplete="name" required minlength="3">
+                    </label>
+                    <label class="form-field" for="documento">
+                        Documento de identidad
+                        <input type="text" inputmode="numeric" pattern="[0-9]+" placeholder="Ej: 1040203756" requiredid="documento" name="documento" autocomplete="off" required minlength="6" maxlength="10" >
                     </label>
 
                     <label class="form-field" for="email">
@@ -38,17 +42,19 @@
 
                     <label class="form-field" for="telefono">
                         Teléfono
-                        <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono" autocomplete="tel" required>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Debe de iniciar en 3" autocomplete="tel" required
+                        minlength="10" maxlength="10" pattern="3[0-9]+">
                     </label>
 
-                    <label class="form-field" for="documento">
-                        Documento de identidad
-                        <input type="text" id="documento" name="documento" autocomplete="off" required>
-                    </label>
+                    
                 </fieldset>
 
                 <fieldset class="form-group">
-                    <legend>Tu alquiler</legend>
+                    <label class="form-field" for="fecha">
+                        Fecha de alquiler
+                        <input type="date" id="fecha" name="fecha"  min="2026-11-01" max="2026-12-31"required >
+                    </label>
+
                     <label class="form-field" for="bicicleta">
                         Tipo de bicicleta
                         <select id="bicicleta" name="bicicleta" required>
@@ -58,14 +64,8 @@
                             <option value="electrica">Eléctrica</option>
                         </select>
                     </label>
-
-                    <label class="form-field" for="fecha">
-                        Fecha de reserva
-                        <input type="date" id="fecha" name="fecha" required>
-                    </label>
-
                     <fieldset class="choice-group">
-                        <legend>Duración del alquiler</legend>
+                        <legend>Plan</legend>
                         <label class="choice-option" for="duracion-hora">
                             <input type="radio" id="duracion-hora" name="duracion" value="1-hora" required>
                             1 hora
@@ -79,18 +79,45 @@
                             Día completo
                         </label>
                     </fieldset>
-                </fieldset>
+                    <label class="form-field" for="bicicleta">
+                       <br>
+                        Cantidad de Bicicletas
+                        <select id="bicicleta" name="bicicleta" required>
+                            <option value="" selected disabled>Selecciona la cantidad</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </label>
+                
+                    <label class="form-field" for="recorrido">
+                        <br>
+                        Recorrido guiado
+                        <select id="recorrido" name="recorrido" required>
+                            <option value="" selected disabled>Selecciona el Recorrido</option>
+                            <option value="rioparques">Rio y Parques</option>
+                            <option value="barrio">Sabores de Barrio</option>
+                            <option value="palmas">Reto las palmas</option>
+                            <option value="ninguno">Ninguna Ruta</option>
+                        </select>
+                    </label>
+                    </fieldset>
+
+                    
 
                 <fieldset class="form-group">
                     <legend>Confirmación</legend>
                     <label class="choice-option" for="confirmacion">
                         <input type="checkbox" id="confirmacion" name="confirmacion" value="acepto" required>
-                        Confirmo que los datos de la reserva son correctos.
+                        Estoy de acuerdo con las Politicas de alquiler.
                     </label>
 
                     <label class="form-field" for="comentario">
                         Detalles adicionales <small>(opcional)</small>
-                        <textarea id="comentario" name="comentario" placeholder="Indica el horario u otra información"></textarea>
+                        <textarea id="comentario" name="comentario" placeholder="Indica el horario u otra información" maxlength="300"></textarea>
                     </label>
                 </fieldset>
 
