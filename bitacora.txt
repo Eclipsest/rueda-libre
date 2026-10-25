@@ -82,9 +82,7 @@ Se concluyó que el Azul Noche, el Verde Ruta y el Gris Asfalto ofrecen buen con
 
 En la página local `paginas/tarifas.html`, se compararon los estilos computados del `body` y del primer párrafo de `main` en el navegador:
 
-| Propiedad | ¿Se hereda? | `body` | Párrafo |
-|---|---|---|---|
-| `color` | Sí | `rgb(20, 33, 61)` (Azul Noche) | `rgb(20, 33, 61)` (Azul Noche) |
-| `margin-top` | No | `0px` | `16px` |
+| `color` | Sí hereda| `rgb(20, 33, 61)` (Azul Noche) | `rgb(20, 33, 61)` (Azul Noche) |
+| `margin-top` | No hereda | `0px` | `16px` |
 
 El párrafo hereda el color de texto definido en `body`. En cambio, su margen superior conserva el valor propio del párrafo y no toma el `margin: 0` del cuerpo.
