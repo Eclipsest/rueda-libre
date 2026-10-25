@@ -49,6 +49,31 @@ a:focus-visible {
     outline-offset: 3px;
 }
 
+.cta-button {
+    padding: 0.75rem 1.25rem;
+    border-radius: 7px;
+    background-color: var(--color-verde-ruta);
+    color: #FFFFFF;
+    font-weight: 700;
+    text-align: center;
+    transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.cta-button:hover {
+    background-color: var(--color-naranja-pedal);
+    color: var(--color-azul-noche);
+    text-decoration: none;
+}
+
+.cta-button:active {
+    transform: translateY(1px);
+}
+
+.cta-button:focus-visible {
+    outline: 3px solid var(--color-azul-noche);
+    outline-offset: 3px;
+}
+
 .site-brand {
     display: block;
     padding: 0.9rem 1rem 0.4rem;
@@ -171,10 +196,11 @@ a:focus-visible {
     color: var(--color-gris-asfalto);
 }
 
-.form-field input:focus,
-.form-field select:focus,
-.form-field textarea:focus {
-    outline: 2px solid var(--color-naranja-pedal);
+.form-field input:focus-visible,
+.form-field select:focus-visible,
+.form-field textarea:focus-visible,
+.choice-option input:focus-visible {
+    outline: 3px solid var(--color-azul-noche);
     outline-offset: 2px;
 }
 
