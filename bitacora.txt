@@ -51,6 +51,14 @@ Se probaron los envíos con la validación nativa del navegador. En los casos bl
  Teléfono | Vacío | Bloquear el envío por ser obligatorio. | Bloqueado; se detectó el campo requerido. |
  Teléfono | `4123456789` | Bloquear el envío porque no comienza por 3. | Bloqueado; no coincide con el patrón solicitado. |
 
+##Auditoria 
+Hallazgos.
+index/inicio- Correcion de jerarquias
+tarifas - Recomendaciones ajustadas con aside
+reservas - Horario de atencion ajustado con aside
+favicon(en todas las paginas) - de acuerdo a las devtools (error 405)
+reservas - ajuste de acuerdo a devtools, "requiredid" -> "required id", causaba complicaciones al autocompletar, ya esta arreglado.
+
 ## 1. Auditoría de contraste de colores
 
 | Combinación de colores | Contraste | Clasificación |
