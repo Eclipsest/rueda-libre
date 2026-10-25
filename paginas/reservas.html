@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas | Rueda Libre</title>
+    <link rel="stylesheet" href="../style_prueba.css">
+</head>
+<body>
+    <header>
+        <a class="site-brand" href="../index.html">Rueda Libre</a>
+        <nav class="menu" aria-label="Navegación principal">
+            <ul class="menu-list">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="tarifas.html">Tarifas</a></li>
+                <li><a href="reservas.html" aria-current="page">Reservas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-page" aria-labelledby="titulo-reserva">
+            <form class="formulario" method="post">
+                <h1 id="titulo-reserva">Formulario de reserva</h1>
+                <p class="form-intro">Completa tus datos y cuéntanos qué bicicleta quieres reservar.</p>
+
+                <fieldset class="form-group">
+                    <legend>Tus datos</legend>
+                    <label class="form-field" for="nombre">
+                        Nombre
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre y apellidos" autocomplete="name" required minlength="3">
+                    </label>
+                    <label class="form-field" for="documento">
+                        Documento de identidad
+                        <input type="text" inputmode="numeric" pattern="[0-9]+" placeholder="Ej: 1040203756" requiredid="documento" name="documento" autocomplete="off" required minlength="6" maxlength="10" >
+                    </label>
+
+                    <label class="form-field" for="email">
+                        Correo electrónico
+                        <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" autocomplete="email" required>
+                    </label>
+
+                    <label class="form-field" for="telefono">
+                        Teléfono
+                        <input type="tel" id="telefono" name="telefono" placeholder="Debe de iniciar en 3" autocomplete="tel" required
+                        minlength="10" maxlength="10" pattern="3[0-9]+">
+                    </label>
+
+                    
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <label class="form-field" for="fecha">
+                        Fecha de alquiler
+                        <input type="date" id="fecha" name="fecha"  min="2026-11-01" max="2026-12-31"required >
+                    </label>
+
+                    <label class="form-field" for="bicicleta">
+                        Tipo de bicicleta
+                        <select id="bicicleta" name="bicicleta" required>
+                            <option value="" selected disabled>Selecciona una bicicleta</option>
+                            <option value="urbana">Urbana</option>
+                            <option value="montana">Montaña</option>
+                            <option value="electrica">Eléctrica</option>
+                        </select>
+                    </label>
+                    <fieldset class="choice-group">
+                        <legend>Plan</legend>
+                        <label class="choice-option" for="duracion-hora">
+                            <input type="radio" id="duracion-hora" name="duracion" value="1-hora" required>
+                            1 hora
+                        </label>
+                        <label class="choice-option" for="duracion-medio-dia">
+                            <input type="radio" id="duracion-medio-dia" name="duracion" value="medio-dia">
+                            Medio día (4 horas)
+                        </label>
+                        <label class="choice-option" for="duracion-dia">
+                            <input type="radio" id="duracion-dia" name="duracion" value="dia-completo">
+                            Día completo
+                        </label>
+                    </fieldset>
+                    <label class="form-field" for="bicicleta">
+                       <br>
+                        Cantidad de Bicicletas
+                        <select id="bicicleta" name="bicicleta" required>
+                            <option value="" selected disabled>Selecciona la cantidad</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </label>
+                
+                    <label class="form-field" for="recorrido">
+                        <br>
+                        Recorrido guiado
+                        <select id="recorrido" name="recorrido" required>
+                            <option value="" selected disabled>Selecciona el Recorrido</option>
+                            <option value="rioparques">Rio y Parques</option>
+                            <option value="barrio">Sabores de Barrio</option>
+                            <option value="palmas">Reto las palmas</option>
+                            <option value="ninguno">Ninguna Ruta</option>
+                        </select>
+                    </label>
+                    </fieldset>
+
+                    
+
+                <fieldset class="form-group">
+                    <legend>Confirmación</legend>
+                    <label class="choice-option" for="confirmacion">
+                        <input type="checkbox" id="confirmacion" name="confirmacion" value="acepto" required>
+                        Estoy de acuerdo con las Politicas de alquiler.
+                    </label>
+
+                    <label class="form-field" for="comentario">
+                        Detalles adicionales <small>(opcional)</small>
+                        <textarea id="comentario" name="comentario" placeholder="Indica el horario u otra información" maxlength="300"></textarea>
+                    </label>
+                </fieldset>
+
+                <button type="submit">Solicitar reserva</button>
+            </form>
+        </section>
+
+        <aside class="reservation-hours" aria-labelledby="horario-atencion">
+            <h2 id="horario-atencion">Horario de atención</h2>
+            <dl>
+                <dt>Lunes a viernes:</dt>
+                <dd>7:00 a. m. - 7:00 p. m.</dd>
+                <dt>Sábados, domingos y festivos:</dt>
+                <dd>6:00 a. m. - 2:00 p. m.</dd>
+            </dl>
+        </aside>
+    </main>
+
+    <footer>
+        <p>¿Tienes alguna pregunta? <a href="mailto:reservaspersonal@ruedalibre.com">Contáctanos por correo</a>.</p>
+        <p>&copy; 2026 Rueda Libre <a href="mailto:info@ruedalibre.com">info@ruedalibre.com</a></p>
+    </footer>
+</body>
+</html>

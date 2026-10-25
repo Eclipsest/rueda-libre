@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de contacto | Rueda Libre</title>
+    <link rel="stylesheet" href="style_prueba.css">
+</head>
+<body>
+    <nav class="menu" aria-label="Navegación principal">
+        <ul class="menu-list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="paginas/tarifas.html">Tarifas</a></li>
+            <li><a href="paginas/reservas.html">Reservas</a></li>
+        </ul>
+    </nav>
+
+    <main class="form-page">
+        <form class="formulario">
+            <h1>Formulario de contacto</h1>
+            <p class="form-intro">Déjanos tus datos y cuéntanos cómo podemos ayudarte.</p>
+
+            <label class="form-field" for="nombre">
+                Nombre
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre y apellidos" autocomplete="name" required>
+            </label>
+
+            <label class="form-field" for="email">
+                Correo electrónico
+                <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" autocomplete="email" required>
+            </label>
+
+            <label class="form-field" for="telefono">
+                Teléfono
+                <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono" autocomplete="tel" required>
+            </label>
+
+            <label class="form-field" for="documento">
+                Documento de identidad
+                <input type="text" id="documento" name="documento" placeholder="C.C. o T.I." autocomplete="off" required>
+            </label>
+
+            <label class="form-field" for="comentario">
+                Comentario <small>(opcional)</small>
+                <textarea id="comentario" name="comentario" placeholder="Escribe tu comentario"></textarea>
+            </label>
+
+            <button type="submit">Enviar mensaje</button>
+        </form>
+    </main>
+</body>
+</html>

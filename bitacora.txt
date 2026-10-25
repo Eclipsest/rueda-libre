@@ -18,3 +18,62 @@ ex: permite definir colores acuerdo a las bicicletas, y que estas mismas se pued
 JAVASCRIPT Define el comportamiento de la pagina
 ex: permite que el usuario elija la bicicleta que desee, pueda ver especificaciones, indique cuantos dias la va a alquilar y de acuerdo a los dias
 el sitio le muestre el valor de alquiler.
+
+##
+Tabla de rutas internas utilizadas
+Archivo de origen	Destino	Ruta escrita
+index.html	paginas/tarifas.html	paginas/tarifas.html
+index.html	paginas/reservas.html	paginas/reservas.html
+index.html	seccion Encuentranos (#encuentranos)	#encuentranos
+index.html	tabla de recorridos en paginas/tarifas.html	paginas/tarifas.html#Tabla recorridos
+paginas/tarifas.html	index.html	../index.html
+paginas/tarifas.html	paginas/reservas.html	reservas.html
+paginas/reservas.html	index.html	../index.html
+paginas/reservas.html	paginas/tarifas.html	tarifas.html
+
+## Uso de elementos semánticos
+Los contenedores `div` que agrupaban la etiqueta y su control fueron reemplazados por `label`, que asocia cada campo con su nombre. El `div` usado como envoltorio del formulario de reservas se reemplazó por una `section` identificada por el título "Reserva tu bicicleta". Los `span` que indicaban que un campo era opcional se reemplazaron por `small`, apropiado para texto secundario.
+
+## Formulario de reserva
+El correo usa `type="email"` para validar una dirección con formato de correo; el tipo de bicicleta usa un `select` porque se elige una opción de una lista cerrada; la duración usa botones `radio` porque las opciones son mutuamente excluyentes. La confirmación usa una casilla obligatoria para registrar la aceptación explícita, y los detalles adicionales se recogen con un área de texto para permitir respuestas libres.
+
+## Pruebas de validación del formulario de reserva
+
+Se probaron los envíos con la validación nativa del navegador. En los casos bloqueados, el evento de envío no se ejecutó; para evitar enviar información a un servidor, los intentos válidos se interceptaron en el navegador.
+
+## pruebas formulario de reserva
+ Nombre | Vacío | Bloquear el envío por ser obligatorio. | Bloqueado; el navegador indicó que se debe completar el campo. |
+ Nombre | `Al` (2 caracteres) | Bloquear el envío por tener menos de 3 caracteres. | Bloqueado; se detectó longitud menor al mínimo. |
+ Documento | Vacío | Bloquear el envío por ser obligatorio. | Bloqueado; se detectó el campo requerido. |
+ Documento | `12A456` | Bloquear el envío por incluir caracteres no numéricos. | Bloqueado; no coincide con el patrón de dígitos. |
+ Documento | `12345` (5 dígitos) | Bloquear el envío por tener menos de 6 dígitos. | Bloqueado; se detectó longitud menor al mínimo. |
+ Correo electrónico | Vacío | Bloquear el envío por ser obligatorio. | Bloqueado; se detectó el campo requerido. |
+ Teléfono | Vacío | Bloquear el envío por ser obligatorio. | Bloqueado; se detectó el campo requerido. |
+ Teléfono | `4123456789` | Bloquear el envío porque no comienza por 3. | Bloqueado; no coincide con el patrón solicitado. |
+
+## 1. Auditoría de contraste de colores
+
+| Combinación de colores | Contraste | Clasificación |
+| Blanco sobre Verde Ruta | 5,31:1 | Apta para texto normal |
+| Blanco sobre Naranja Pedal | 2,22:1 | No apta |
+| Azul Noche sobre Naranja Pedal | 7,20:1 | Apta para texto normal |
+| Azul Noche sobre Crema | 14,83:1 | Apta para texto normal |
+| Gris Asfalto sobre Crema | 5,57:1 | Apta para texto normal |
+| Verde Ruta sobre Crema | 4,93:1 | Apta para texto normal |
+| Naranja Pedal sobre Crema | 2,06:1 | No apta |
+| Blanco sobre Azul Noche | 15,97:1 | Apta para texto normal |
+
+Como resultado, seis combinaciones son aptas para texto normal y dos no cumplen el contraste mínimo. Se recomienda evitar el texto blanco sobre naranja y el texto naranja sobre crema, utilizando Azul Noche como alternativa para mejorar la legibilidad.
+
+## 2. Mapa de uso de color
+
+| Elemento | Color recomendado | Uso |
+
+| Fondo general | Crema `#FAF6EF` | Fondo principal de las páginas |
+| Títulos | Azul Noche `#14213D` | Encabezados y títulos |
+| Botones principales | Verde Ruta `#1E7A4F` con texto blanco | Acciones principales |
+| Botones secundarios | Naranja Pedal `#F39A2B` con texto Azul Noche | Acciones secundarias |
+| Enlaces | Verde Ruta `#1E7A4F` | Navegación y enlaces de contenido |
+| Texto secundario | Gris Asfalto `#5B6470` | Descripciones y textos complementarios |
+
+Se concluyó que el Azul Noche, el Verde Ruta y el Gris Asfalto ofrecen buen contraste sobre el fondo crema. El naranja se utilizará principalmente en botones secundarios y elementos destacados, con texto Azul Noche para garantizar una mejor legibilidad.
