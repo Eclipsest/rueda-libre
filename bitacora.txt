@@ -94,3 +94,25 @@ En la página local `paginas/tarifas.html`, se compararon los estilos computados
 | `margin-top` | No hereda | `0px` | `16px` |
 
 El párrafo hereda el color de texto definido en `body`. En cambio, su margen superior conserva el valor propio del párrafo y no toma el `margin: 0` del cuerpo.
+
+## Cierre de bitácora – Semana 1
+
+Durante esta semana desarrollé los 12 MiniRetos del proyecto Rueda Libre
+
+- MiniReto 1: Creé el repositorio y la página base del proyecto.
+- MiniReto 2: Construí la vitrina de Rueda Libre para presentar el servicio de alquiler de bicicletas.
+- MiniReto 3: Organicé las tarifas mediante tablas y configuré las rutas relativas entre archivos.
+- MiniReto 4: Integré las páginas para lograr una navegación funcional.
+- MiniReto 5: Organicé el contenido utilizando HTML semántico para darle significado a cada sección.
+- MiniReto 6: Creé el formulario de reservas para recopilar los datos necesarios de los usuarios.
+- MiniReto 7: Añadí validaciones y tipos de entrada para reducir errores al diligenciar el formulario.
+- MiniReto 8: Publiqué la versión 0.2 del sitio, mejorando su accesibilidad y disponibilidad en línea.
+- MiniReto 9: Definí la identidad visual de Rueda Libre mediante estilos CSS y colores.
+- MiniReto 10: Mejoré la navegación y los estados visuales de los elementos interactivos.
+- MiniReto 11: Organicé los elementos con el modelo de caja de CSS para controlar márgenes, bordes y espacios.
+- MiniReto 12: Integré los avances y completé la versión 1.0 del sitio web informativo.
+
+¿Qué mejoraría? Mejoraria items de acuerdo a los estilos, por una parte mejoraria la adaptibilidad a otros dispositivos como celulares,
+para que no se vea tan angosto, por otra parte desde mi punto personal mejoraria los estilos en css, pero ya recae un poco en mi por ser
+la primera vez entendiendo y jugando con css. aun asi, estoy contento con el resultado y que todas las interacciones que tiene el sitio no
+contienen ningun error, y son funcionales, y me siento comodo con el uso (aunque basico) de css.
