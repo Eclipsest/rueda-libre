@@ -63,7 +63,9 @@ Fecha de alquiler - Fecha, Deja escoger la fecha mas comodamente.
 | Naranja Pedal sobre Crema | 2,06:1 | No apta |
 | Blanco sobre Azul Noche | 15,97:1 | Apta para texto normal |
 
-Como resultado, seis combinaciones son aptas para texto normal y dos no cumplen el contraste mínimo. Se recomienda evitar el texto blanco sobre naranja y el texto naranja sobre crema, utilizando Azul Noche como alternativa para mejorar la legibilidad.
+Como resultado, seis combinaciones son aptas para texto normal y dos no cumplen el contraste mínimo. 
+Se recomienda evitar el texto blanco sobre naranja y el texto naranja sobre crema.
+utilizando Azul Noche como alternativa para mejorar la legibilidad.
 
 ## 2. Mapa de uso de color
 
@@ -76,4 +78,6 @@ Como resultado, seis combinaciones son aptas para texto normal y dos no cumplen 
 | Enlaces | Verde Ruta `#1E7A4F` | Navegación y enlaces de contenido |
 | Texto secundario | Gris Asfalto `#5B6470` | Descripciones y textos complementarios |
 
-Se concluyó que el Azul Noche, el Verde Ruta y el Gris Asfalto ofrecen buen contraste sobre el fondo crema. El naranja se utilizará principalmente en botones secundarios y elementos destacados, con texto Azul Noche para garantizar una mejor legibilidad.
+Se concluyó que el Azul Noche, el Verde Ruta y el Gris Asfalto ofrecen buen contraste sobre el fondo crema.
+El naranja se utilizará principalmente en botones secundarios y elementos destacados,
+con texto Azul Noche para garantizar una mejor legibilidad.
