@@ -48,5 +48,5 @@ Fecha de alquiler - Fecha, Deja escoger la fecha mas comodamente.
 4	Correo electrónico	Vacío | Es un campo obligatorio
 5	Teléfono	12345 | Debe empezar por 3
 6	Fecha de alquiler	Una fecha pasada | Solo permite desde el 1 de noviembre y el 31 de diciembre de 2026.
-7	 Fecha alquiler Vacia | Es obligatorio elegir la fecha de alquiler
+7	Fecha alquiler Vacia | Es obligatorio elegir la fecha de alquiler
 8	Nombre	Vacío | Es obligatorio llenar el area de nombre.
