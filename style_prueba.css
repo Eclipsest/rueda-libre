@@ -107,7 +107,7 @@ a:focus-visible,
     list-style: none;
     text-align: center;
     display: flex;
-    gap: 70px;
+    gap: 150px;
     
 }
 
@@ -115,6 +115,8 @@ a:focus-visible,
     flex:1;
     vertical-align: middle;
     align-items: center;
+    gap: 200px;
+    text-size-adjust: 100px;
 }
 
 .menu-list a {
@@ -123,6 +125,9 @@ a:focus-visible,
     padding: 0.7rem 1.15rem;
     border-radius: 8px;
     font-weight: 700;
+    width: 200px;
+    height: auto;
+    justify-content: center;
 }
 
 /* Home page and service cards */
@@ -215,11 +220,14 @@ a:focus-visible,
 .service-card-actions {
     display: flex;
     gap: var(--spacing-sm);
+    flex-direction: column;
+    
 }
 
 .service-card-actions a {
     flex: 1;
     text-align: center;
+    
 }
 
 /* Pricing tables */
