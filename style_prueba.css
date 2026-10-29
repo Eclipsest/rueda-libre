@@ -30,7 +30,7 @@ body {
 }
 
 main {
-    width: min(1200px, calc(100% - 2rem));
+    width: min(75rem, calc(100% - 2rem));
     margin: 0 auto;
 }
 
@@ -58,7 +58,7 @@ h6 {
 a {
     display: inline-block;
     padding: 0.2rem 0.35rem;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     background-color: var(--color-verde-ruta);
     color: #FFFFFF;
     text-decoration: none;
@@ -77,8 +77,8 @@ a:hover {
 
 a:focus-visible,
 .formulario button:focus-visible {
-    outline: 3px solid var(--color-azul-noche);
-    outline-offset: 3px;
+    outline: 0.1875rem solid var(--color-azul-noche);
+    outline-offset: 0.1875rem;
 }
 
 /* Shared site header and navigation */
@@ -90,14 +90,14 @@ a:focus-visible,
     gap: 0.5rem;
     padding: 0.5rem 1rem;
     background-color: var(--color-azul-noche);
-    border-bottom: 1px solid var(--color-gris-asfalto);
+    border-bottom: 0.0625rem solid var(--color-gris-asfalto);
 }
 
 .logo {
     display: flex;
     width: auto;
     padding: 0.7rem 1.15rem;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     font-weight: 700;
     justify-content: center;
     text-align: center;
@@ -133,7 +133,7 @@ a:focus-visible,
     width: min(100%, 16rem);
     margin-inline: auto;
     padding: 0.7rem 1.15rem;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     font-weight: 700;
     justify-content: center;
 }
@@ -148,7 +148,7 @@ a:focus-visible,
 
 .portada > img {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     object-fit: cover;
 }
 
@@ -174,7 +174,7 @@ a:focus-visible,
     align-items: center;
     gap: var(--spacing-md);
     padding: var(--spacing-md);
-    border: 1px solid var(--color-gris-asfalto);
+    border: 0.0625rem solid var(--color-gris-asfalto);
     border-radius: 1rem;
 }
 
@@ -202,7 +202,7 @@ a:focus-visible,
 
 .cta-button {
     padding: 0.75rem 1.25rem;
-    border-radius: 7px;
+    border-radius: 0.4375rem;
     background-color: var(--color-verde-ruta);
     color: #FFFFFF;
     font-weight: 700;
@@ -217,7 +217,7 @@ a:focus-visible,
 }
 
 .cta-button:active {
-    transform: translateY(1px);
+    transform: translateY(0.0625rem);
 }
 
 .service-grid {
@@ -232,8 +232,8 @@ a:focus-visible,
     flex-direction: column;
     gap: var(--spacing-md);
     padding: var(--spacing-lg);
-    border: 1px solid var(--color-gris-asfalto);
-    border-radius: 12px;
+    border: 0.0625rem solid var(--color-gris-asfalto);
+    border-radius: 0.75rem;
 }
 
 .service-card h3,
@@ -245,7 +245,7 @@ a:focus-visible,
     display: block;
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 0.5rem;
 }
 
 .bike-image {
@@ -264,7 +264,7 @@ a:focus-visible,
     top: var(--spacing-sm);
     right: var(--spacing-sm);
     padding: 0.25rem 0.65rem;
-    border-radius: 999px;
+    border-radius: 62.4375rem;
     background-color: var(--color-naranja-pedal);
     color: var(--color-azul-noche);
     font-size: 0.875rem;
@@ -301,7 +301,7 @@ caption {
 th,
 td {
     padding: 0.35rem 0.25rem;
-    border: 1px solid var(--color-gris-asfalto);
+    border: 0.0625rem solid var(--color-gris-asfalto);
     text-align: left;
     overflow-wrap: anywhere;
     hyphens: auto;
@@ -317,15 +317,17 @@ th {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     gap: 1.5rem;
-    width: min(1200px, calc(100% - 2rem));
+    width: 100%;
     margin: 0 auto;
-    padding: var(--spacing-xl) 0 3rem;
+    padding: var(--spacing-xl) 0;
     align-items: start;
+    justify-content: center;
 }
 
 .form-page {
     display: flex;
     min-width: 0;
+    margin: 0;
     justify-content: center;
 }
 
@@ -337,11 +339,11 @@ th {
     width: 100%;
     min-width: 0;
     padding: clamp(1.25rem, 4vw, 2rem);
-    border: 2px solid var(--color-gris-asfalto);
-    border-radius: 16px;
+    border: 0.125rem solid var(--color-gris-asfalto);
+    border-radius: 1rem;
     background-color: var(--color-crema);
     color: var(--color-azul-noche);
-    box-shadow: 0 8px 24px rgb(20 33 61 / 6%);
+    box-shadow: 0 0.5rem 1.5rem rgb(20 33 61 / 6%);
 }
 
 .formulario h1,
@@ -391,8 +393,8 @@ th {
     min-width: 0;
     margin: 0;
     padding: 1rem;
-    border: 1px solid var(--color-gris-asfalto);
-    border-radius: 12px;
+    border: 0.0625rem solid var(--color-gris-asfalto);
+    border-radius: 0.75rem;
 }
 
 .form-group legend,
@@ -429,8 +431,8 @@ th {
 .form-field textarea {
     width: 100%;
     padding: 0.75rem 0.85rem;
-    border: 1px solid var(--color-gris-asfalto);
-    border-radius: 7px;
+    border: 0.0625rem solid var(--color-gris-asfalto);
+    border-radius: 0.4375rem;
     background-color: var(--color-crema);
     color: var(--color-azul-noche);
     font: inherit;
@@ -446,12 +448,12 @@ th {
 .form-field select:focus-visible,
 .form-field textarea:focus-visible,
 .choice-option input:focus-visible {
-    outline: 3px solid var(--color-azul-noche);
-    outline-offset: 2px;
+    outline: 0.1875rem solid var(--color-azul-noche);
+    outline-offset: 0.125rem;
 }
 
 .form-field textarea {
-    min-height: 110px;
+    min-height: 6.875rem;
     resize: vertical;
 }
 
@@ -460,8 +462,8 @@ th {
     gap: 0.65rem;
     margin: 0;
     padding: 0.75rem;
-    border: 1px solid var(--color-gris-asfalto);
-    border-radius: 8px;
+    border: 0.0625rem solid var(--color-gris-asfalto);
+    border-radius: 0.5rem;
 }
 
 .choice-option {
@@ -484,7 +486,7 @@ th {
     margin: 0;
     padding: var(--spacing-md) var(--spacing-xl);
     border: 0;
-    border-radius: 7px;
+    border-radius: 0.4375rem;
     background-color: var(--color-verde-ruta);
     color: #FFFFFF;
     font: inherit;
@@ -499,17 +501,19 @@ th {
 }
 
 .formulario button:active {
-    transform: translateY(1px);
+    transform: translateY(0.0625rem);
 }
 
 .reservation-hours {
+    width: 100%;
     min-width: 0;
     margin: 0;
-    padding: 1.25rem clamp(1.25rem, 4vw, 2rem);
-    border: 1px solid var(--color-gris-asfalto);
-    border-radius: 12px;
+    padding: clamp(1rem, 3vw, 1.5rem);
+    border: 0.0625rem solid var(--color-gris-asfalto);
+    border-radius: 0.75rem;
     background-color: var(--color-crema);
     color: var(--color-azul-noche);
+    overflow-wrap: anywhere;
 }
 
 .reservation-hours h2 {
@@ -519,18 +523,17 @@ th {
 
 .reservation-hours dl {
     display: grid;
-    grid-template-columns: minmax(0, auto) minmax(0, 1fr);
-    gap: 0.5rem 1rem;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.25rem;
     margin-bottom: 0;
 }
 
-.reservation-hours dt,
-.reservation-hours dd {
-    overflow-wrap: anywhere;
+.reservation-hours dt {
+    font-weight: 700;
 }
 
 .reservation-hours dd {
-    margin: 0;
+    margin: 0 0 0.75rem;
 }
 
 /* Shared footer and fixed contact link */
@@ -540,18 +543,18 @@ th {
     right: var(--spacing-md);
     bottom: var(--spacing-md);
     padding: 0.75rem 1rem;
-    border: 2px solid var(--color-crema);
-    border-radius: 999px;
+    border: 0.125rem solid var(--color-crema);
+    border-radius: 62.4375rem;
     background-color: var(--color-verde-ruta);
     color: #FFFFFF;
     font-weight: 700;
-    box-shadow: 0 2px 8px rgb(20 33 61 / 25%);
+    box-shadow: 0 0.125rem 0.5rem rgb(20 33 61 / 25%);
 }
 
 footer {
     margin-top: 3rem;
     padding: 2rem clamp(1rem, 5vw, 3rem);
-    border-top: 1px solid var(--color-gris-asfalto);
+    border-top: 0.0625rem solid var(--color-gris-asfalto);
     background-color: var(--color-naranja-pedal);
     color: var(--color-azul-noche);
     text-align: center;
@@ -567,7 +570,7 @@ footer p {
 footer a {
     display: inline-block;
     padding: 0.45rem 0.7rem;
-    border-radius: 7px;
+    border-radius: 0.4375rem;
     background-color: var(--color-verde-ruta);
     color: #FFFFFF;
     font-weight: 700;
@@ -596,7 +599,7 @@ footer a {
     font-weight: 700;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
     .site-header {
         flex-direction: row;
         justify-content: space-between;
@@ -634,6 +637,10 @@ footer a {
 
     .reservas-layout {
         grid-template-columns: minmax(0, 1fr);
+    }
+
+    .reservation-hours {
+        max-width: none;
     }
 
     .reservas-layout .formulario {
@@ -677,7 +684,7 @@ footer a {
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 75rem) {
     .portada {
         grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
         align-items: center;
@@ -692,6 +699,11 @@ footer a {
     }
 
     .reservas-layout {
-        grid-template-columns: minmax(0, 2fr) minmax(250px, 1fr);
+        grid-template-columns: minmax(0, 2fr) minmax(15.625rem, 1fr);
+    }
+
+    .reservation-hours {
+        grid-column: 2;
+        grid-row: 1;
     }
 }
