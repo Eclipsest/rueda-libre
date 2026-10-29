@@ -30,13 +30,18 @@ body {
 }
 
 main {
-    width: 80%;
-    margin: auto auto;
-    
+    width: min(1200px, calc(100% - 2rem));
+    margin: 0 auto;
 }
 
 main > section {
     margin-block: var(--spacing-xl);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 h1,
@@ -80,75 +85,114 @@ a:focus-visible,
 .site-header {
     display: flex;
     width: 100%;
-    max-height: 12rem;
-    margin: 0 auto;
-    object-fit: contain;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
     background-color: var(--color-azul-noche);
     border-bottom: 1px solid var(--color-gris-asfalto);
-    gap: 20px;
-    margin: 0 auto;
-    flex-direction: row;
 }
 
-.logo{
+.logo {
     display: flex;
-    flex-wrap: wrap;
+    width: auto;
     padding: 0.7rem 1.15rem;
     border-radius: 8px;
     font-weight: 700;
-    width: 200px;
-    height: auto;
     justify-content: center;
+    text-align: center;
 }
 
 .menu {
-    background-color: var(--color-azul-noche);
-    border-bottom: 1px solid var(--color-gris-asfalto);
     display: flex;
-    
+    width: 100%;
+    justify-content: center;
+    object-fit: cover;
 }
 
 .menu-list {
-    max-width: 1100px;
-    min-height: 64px;
-    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0.25rem 0 0.5rem;
     list-style: none;
     text-align: center;
-    display: flex;
-    gap: 150px;
-    
 }
 
-.menu-list li{
-    flex:1;
-    vertical-align: middle;
-    align-items: center;
-    gap: 200px;
-    text-size-adjust: 100px;
+.menu-list li {
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 .menu-list a {
     display: flex;
-    flex-wrap: wrap;
+    width: min(100%, 16rem);
+    margin-inline: auto;
     padding: 0.7rem 1.15rem;
     border-radius: 8px;
     font-weight: 700;
-    width: 200px;
-    height: auto;
     justify-content: center;
 }
 
 /* Home page and service cards */
+.portada {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--spacing-lg);
+    min-width: 0;
+}
+
+.portada > img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.rutas {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.rutas-2 {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    gap: var(--spacing-md);
+}
+
+.rutas-org {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    border: 1px solid var(--color-gris-asfalto);
+    border-radius: 1rem;
+}
+
+.rutas-org img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
 .home-hero {
     display: flex;
-    min-height: 50vh;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     gap: var(--spacing-md);
     padding-block: var(--spacing-xl);
+    min-width: 0;
 }
 
 .home-hero h1,
@@ -178,7 +222,7 @@ a:focus-visible,
 
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+    grid-template-columns: minmax(0, 1fr);
     gap: var(--spacing-lg);
 }
 
@@ -200,7 +244,7 @@ a:focus-visible,
 .service-card img {
     display: block;
     width: 100%;
-    height: 100%;
+    height: auto;
     border-radius: 8px;
 }
 
@@ -229,15 +273,13 @@ a:focus-visible,
 
 .service-card-actions {
     display: flex;
-    gap: var(--spacing-sm);
     flex-direction: column;
-    
+    gap: var(--spacing-sm);
 }
 
 .service-card-actions a {
     flex: 1;
     text-align: center;
-    
 }
 
 /* Pricing tables */
@@ -245,7 +287,9 @@ table {
     width: 100%;
     margin-block: var(--spacing-md);
     border-collapse: collapse;
+    table-layout: fixed;
     color: var(--color-azul-noche);
+    font-size: 0.75rem;
 }
 
 caption {
@@ -256,10 +300,11 @@ caption {
 
 th,
 td {
-    padding: var(--spacing-sm) var(--spacing-md);
+    padding: 0.35rem 0.25rem;
     border: 1px solid var(--color-gris-asfalto);
     text-align: left;
     overflow-wrap: anywhere;
+    hyphens: auto;
 }
 
 th {
@@ -268,21 +313,63 @@ th {
 }
 
 /* Reservation and contact forms */
+.reservas-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+    width: min(1200px, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: var(--spacing-xl) 0 3rem;
+    align-items: start;
+}
+
 .form-page {
     display: flex;
+    min-width: 0;
     justify-content: center;
-    padding: var(--spacing-xl) var(--spacing-md) 3rem;
 }
 
 .formulario {
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
     gap: var(--spacing-md);
-    width: min(100%, 34rem);
+    width: 100%;
+    min-width: 0;
     padding: clamp(1.25rem, 4vw, 2rem);
     border: 2px solid var(--color-gris-asfalto);
     border-radius: 16px;
     background-color: var(--color-crema);
     color: var(--color-azul-noche);
+    box-shadow: 0 8px 24px rgb(20 33 61 / 6%);
+}
+
+.formulario h1,
+.form-intro {
+    grid-column: 1 / -1;
+}
+
+.form-data {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 0;
+    grid-column: 1;
+}
+
+.personal-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 0;
+    grid-column: 1;
+}
+
+.confirmation-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: stretch;
+    gap: 1rem;
 }
 
 .formulario h1 {
@@ -298,13 +385,14 @@ th {
 }
 
 .form-group {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     min-width: 0;
-    gap: var(--spacing-md);
     margin: 0;
-    padding: var(--spacing-md);
+    padding: 1rem;
     border: 1px solid var(--color-gris-asfalto);
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 .form-group legend,
@@ -314,10 +402,19 @@ th {
     font-weight: 700;
 }
 
-.form-field {
+.field-row {
     display: grid;
+    gap: 1rem;
+}
+
+.two-col {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
     gap: 0.45rem;
-    margin: 0;
     font-weight: 700;
 }
 
@@ -384,7 +481,7 @@ th {
 .formulario button {
     display: block;
     width: 100%;
-    margin-top: var(--spacing-sm);
+    margin: 0;
     padding: var(--spacing-md) var(--spacing-xl);
     border: 0;
     border-radius: 7px;
@@ -406,8 +503,8 @@ th {
 }
 
 .reservation-hours {
-    max-width: 34rem;
-    margin: 0 auto 2rem;
+    min-width: 0;
+    margin: 0;
     padding: 1.25rem clamp(1.25rem, 4vw, 2rem);
     border: 1px solid var(--color-gris-asfalto);
     border-radius: 12px;
@@ -422,9 +519,14 @@ th {
 
 .reservation-hours dl {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: minmax(0, auto) minmax(0, 1fr);
     gap: 0.5rem 1rem;
     margin-bottom: 0;
+}
+
+.reservation-hours dt,
+.reservation-hours dd {
+    overflow-wrap: anywhere;
 }
 
 .reservation-hours dd {
@@ -463,90 +565,133 @@ footer p {
 }
 
 footer a {
-    display: center;
-    padding: auto;
+    display: inline-block;
+    padding: 0.45rem 0.7rem;
     border-radius: 7px;
     background-color: var(--color-verde-ruta);
     color: #FFFFFF;
     font-weight: 700;
     text-align: center;
     transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
-    max-width: fit-content;
 }
 
-@media (max-width: 30rem) {
-    .service-card-actions {
-        flex-direction: column;
-    }
-
-    .whatsapp-link {
-        right: var(--spacing-sm);
-        bottom: var(--spacing-sm);
-    }
-}
-
-.footer-list{
+.footer-list {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
     list-style: none;
-    gap: 50;
     justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
-.footer-list li{
-    display: center;
+.footer-list li {
+    text-align: center;
 }
+
 .precio {
-            color: green;
-            font-size: 22px;
-            font-weight: bold;
-        }
-
-.portada{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    justify-content: center;
-    grid-auto-flow: column;
-   
+    color: var(--color-verde-ruta);
+    font-size: 1.375rem;
+    font-weight: 700;
 }
 
-.portada img{
-    display: flex;
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    gap: 1rem;
+@media (min-width: 768px) {
+    .site-header {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+        padding-inline: clamp(1rem, 4vw, 3rem);
+    }
+
+    .menu {
+        width: auto;
+    }
+
+    .menu-list {
+        flex-direction: row;
+        width: auto;
+        gap: 0.5rem;
+        padding: 0;
+    }
+
+    .menu-list li {
+        width: auto;
+    }
+
+    .menu-list a {
+        width: auto;
+        min-width: 7rem;
+    }
+
+    .rutas-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .reservas-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .reservas-layout .formulario {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .reservas-layout .form-data {
+        grid-column: 1;
+    }
+
+    .reservas-layout .personal-column {
+        grid-column: 2;
+    }
+
+    .two-col {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    table {
+        font-size: 0.875rem;
+    }
+
+    th,
+    td {
+        padding: 0.5rem 0.75rem;
+    }
+
+    .confirmation-row {
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+    }
+
+    .formulario button {
+        width: auto;
+    }
+
+    .footer-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 1rem;
+    }
 }
 
-.rutas{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 3rem;
-    
-}
+@media (min-width: 1200px) {
+    .portada {
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+        align-items: center;
+    }
 
+    .rutas-2 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 
-.rutas-org{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: auto;
-    gap: 1rem;
-}
+    .service-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 
-
-.rutas-org img{
-    display: flex;
-    width: 100%;
-    height: 100%;
-
-}
-.rutas-2{
-    display: flex;
-    height: 100%;
-    gap: 1rem;
+    .reservas-layout {
+        grid-template-columns: minmax(0, 2fr) minmax(250px, 1fr);
+    }
 }

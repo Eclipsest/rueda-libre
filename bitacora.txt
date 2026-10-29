@@ -118,3 +118,18 @@ la primera vez entendiendo y jugando con css. aun asi, estoy contento con el res
 contienen ningun error, y son funcionales, y me siento comodo con el uso (aunque basico) de css.
 
 ##Link: https://eclipsest.github.io/rueda-libre/
+
+## MiniReto de diseño responsive
+
+Se reorganizó `style_prueba.css` con estilos base móviles y media queries `min-width` en 768 px (tablet) y 1200 px (escritorio). Se conservó el viewport existente y se ajustó el diseño de portada, galería de rutas, navegación, pie de página y reservas.
+
+### Problemas encontrados y solución
+
+1. **La navegación se desbordaba en celulares:** los enlaces tenían un ancho fijo y la lista usaba espacios de 150 px. Se cambió el encabezado móvil a columna, con el nombre centrado arriba y los enlaces centrados debajo; desde 768 px vuelve a la fila horizontal.
+2. **La portada y las imágenes de rutas no se adaptaban:** la portada y la galería forzaban varias columnas, y algunas imágenes usaban altura de 100 %. Se dejó una columna como base, se agregaron rejillas de dos y tres columnas según el ancho, y se limitaron las imágenes al contenedor con proporción y recorte controlados en las tarjetas.
+3. **Las tablas de tarifas ocupaban más que la pantalla:** el relleno era amplio para tablas de cuatro y cinco columnas. Se fijó el ancho al contenedor, se redujeron tipografía y relleno en móvil y se permitió que el texto largo se ajuste dentro de las celdas; en tablet vuelve un tamaño mayor.
+4. **El formulario de reservas tenía columnas incompatibles con móvil:** la definición `minmax()` de la rejilla era inválida y el horario estaba anidado en el formulario. Se corrigió la rejilla, se ordenó el marcado y se dejó el horario como columna lateral desde 1200 px, apilado en pantallas menores.
+
+### Verificación responsive
+
+Se comprobó la página de inicio, tarifas y reservas en Chromium con viewports de 360, 768, 1200 y 1280 px. No hubo desbordamiento horizontal; las imágenes y tablas quedaron dentro del ancho visible. La navegación cambió de columna a fila a partir de 768 px, la galería pasó de una a dos y luego tres columnas, y el horario de reservas pasó a columna lateral a partir de 1200 px.
