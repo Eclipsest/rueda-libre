@@ -32,6 +32,9 @@ body {
 
 main {
     flex: 1;
+}
+
+main:not(.container) {
     width: min(75rem, calc(100% - 2rem));
     margin: 0 auto;
 }
@@ -55,6 +58,11 @@ h6 {
     margin: 0.5rem 0;
     color: var(--color-azul-noche);
     font-family: var(--font-heading);
+}
+
+.card-title,
+.card-header {
+    color: var(--color-azul-noche);
 }
 
 a {
@@ -140,68 +148,6 @@ a:focus-visible,
     justify-content: center;
 }
 
-/* Home page and service cards */
-.portada {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: var(--spacing-lg);
-    min-width: 0;
-}
-
-.portada > img {
-    width: 100%;
-    border-radius: 0.5rem;
-    object-fit: cover;
-}
-
-.rutas {
-    display: flex;
-    min-width: 0;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
-
-.rutas-2 {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    width: 100%;
-    gap: var(--spacing-md);
-}
-
-.rutas-org {
-    display: flex;
-    min-width: 0;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-md);
-    padding: var(--spacing-md);
-    border: 0.0625rem solid var(--color-gris-asfalto);
-    border-radius: 1rem;
-}
-
-.rutas-org img {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border-radius: 0.5rem;
-    object-fit: cover;
-}
-
-.home-hero {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: var(--spacing-md);
-    padding-block: var(--spacing-xl);
-    min-width: 0;
-}
-
-.home-hero h1,
-.home-hero p {
-    margin: 0;
-}
-
 .cta-button {
     padding: 0.75rem 1.25rem;
     border-radius: 0.4375rem;
@@ -222,49 +168,7 @@ a:focus-visible,
     transform: translateY(0.0625rem);
 }
 
-.service-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: var(--spacing-lg);
-}
-
-.service-card {
-    display: flex;
-    min-width: 0;
-    flex-direction: column;
-    gap: var(--spacing-md);
-    padding: var(--spacing-lg);
-    border: 0.0625rem solid var(--color-gris-asfalto);
-    border-radius: 0.75rem;
-}
-
-.service-card h3,
-.service-card p {
-    margin: 0;
-}
-
-.service-card img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 0.5rem;
-}
-
-.bike-image {
-    height: clamp(12rem, 30vw, 18rem);
-    object-fit: cover;
-    object-position: center;
-}
-
-.service-card--new {
-    position: relative;
-}
-
 .new-badge {
-    position: absolute;
-    z-index: 1;
-    top: var(--spacing-sm);
-    right: var(--spacing-sm);
     padding: 0.25rem 0.65rem;
     border-radius: 62.4375rem;
     background-color: var(--color-naranja-pedal);
@@ -273,18 +177,7 @@ a:focus-visible,
     font-weight: 700;
 }
 
-.service-card-actions {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-sm);
-}
-
-.service-card-actions a {
-    flex: 1;
-    text-align: center;
-}
-
-/* Pricing tables */
+/* Pricing tables are still used by the tariffs page. */
 table {
     width: 100%;
     margin-block: var(--spacing-md);
@@ -314,7 +207,7 @@ th {
     color: #FFFFFF;
 }
 
-/* Reservation and contact forms */
+/* These layout rules are still used by the reservations and contact pages. */
 .reservas-layout {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
@@ -608,6 +501,11 @@ footer a {
     font-weight: 700;
 }
 
+.benefit-highlight {
+    color: var(--color-verde-ruta);
+    font-weight: 700;
+}
+
 @media (min-width: 48rem) {
     .site-header {
         flex-direction: row;
@@ -636,14 +534,7 @@ footer a {
         min-width: 7rem;
     }
 
-    .rutas-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .service-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
+    /* Reservation form and pricing-table layouts remain in use on their pages. */
     .reservas-layout {
         grid-template-columns: minmax(0, 1fr);
     }
@@ -689,19 +580,7 @@ footer a {
 }
 
 @media (min-width: 75rem) {
-    .portada {
-        grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
-        align-items: center;
-    }
-
-    .rutas-2 {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .service-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
+    /* Reservation sidebar layout remains in use on the reservations page. */
     .reservas-layout {
         grid-template-columns: minmax(0, 2fr) minmax(15.625rem, 1fr);
     }

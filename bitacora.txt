@@ -142,3 +142,14 @@ Se comprobó la página de inicio, tarifas y reservas en Chromium con viewports 
 - **Qué dio Bootstrap sin esfuerzo:** puntos de quiebre estándar para una, dos, tres y cuatro columnas; separación consistente entre tarjetas; contenedor adaptable, estilos de tarjeta, tipografía y espaciado. El CSS y el bundle JavaScript se cargan desde el CDN oficial 5.3.8.
 - **Qué control se pierde:** frente a las reglas propias, se reduce el control fino del diseño de tarjetas, colores, tipografía, separación y apariencia de imágenes; para cambiar esos detalles hay que elegir utilidades/componentes de Bootstrap o añadir CSS propio, lo que esta página de prueba evita deliberadamente.
 - **Comprobación:** en modo dispositivo se verificaron 375, 576, 991, 992, 1199 y 1200 px; la flota mostró respectivamente 1, 2, 2, 3, 3 y 4 columnas. Las siete imágenes cargaron y no hubo solicitudes fallidas, respuestas HTTP de error ni errores de consola para CSS/JS del CDN.
+## Integración de Bootstrap en la página de inicio
+
+Bootstrap 5.3.8 se carga antes de `style_prueba.css`, que es la hoja existente compartida por el sitio (no existe un archivo `styles.css`). La portada, servicios, flota, rutas y beneficios ahora usan `container`, `row`, columnas responsivas, gutters y utilidades. Se retiraron las reglas de distribución propias que Inicio dejó de usar; las reglas de tablas, tarifas y reservas permanecen señaladas en la hoja.
+
+### Conflictos observados en DevTools y solución
+
+1. **Ancho del contenedor:** la antigua regla `main { width; margin; }` ganaba a `.container` y reducía el ancho disponible. Se dejó `main` para el crecimiento flexible y se limitó el ancho propio a `main:not(.container)`, de modo que `.container` de Bootstrap controle Inicio.
+2. **Tipografía, márgenes y color de encabezados:** los estilos globales `h1`–`h6` cambiaban el aspecto de los títulos de Bootstrap. Se conservaron Georgia y el azul noche de marca; `fs-*` define los tamaños, `mt-0`/`m-0` controla los márgenes de los encabezados de tarjetas y `.card-title, .card-header` mantiene el color de marca sin `!important`.
+3. **Enlaces de Bootstrap frente a la identidad del sitio:** el selector global `a` aplica el verde de marca, texto blanco y estados naranja, en lugar del enlace azul subrayado de Bootstrap. Se mantuvo esa decisión visual en la hoja cargada después del CDN; `.cta-button` conserva explícitamente el estilo de llamada a la acción. DevTools confirmó los colores de marca en los enlaces y los valores responsivos de las utilidades Bootstrap.
+
+**Verificación:** se comprobó Inicio en modo dispositivo a 360, 768 y 1280 px. La grilla muestra una columna en móvil, adapta flota y beneficios a dos columnas desde `sm`/`md`, y alcanza tres/cuatro columnas en escritorio según cada sección. No hubo desbordamiento horizontal ni solicitudes fallidas; las 19 imágenes cargaron y el CDN no reportó respuestas HTTP de error.
