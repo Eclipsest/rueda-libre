@@ -133,3 +133,12 @@ Se reorganizó `style_prueba.css` con estilos base móviles y media queries `min
 ### Verificación responsive
 
 Se comprobó la página de inicio, tarifas y reservas en Chromium con viewports de 360, 768, 1200 y 1280 px. No hubo desbordamiento horizontal; las imágenes y tablas quedaron dentro del ancho visible. La navegación cambió de columna a fila a partir de 768 px, la galería pasó de una a dos y luego tres columnas, y el horario de reservas pasó a columna lateral a partir de 1200 px.
+
+## Comparación de la grilla propia con Bootstrap 5.3
+
+- **Tiempo invertido:** aproximadamente 2 minutos en reconstruir y comprobar la página de prueba.
+- **CSS de distribución de la flota en la versión propia:** 11 líneas en `style_prueba.css`: 5 para la grilla base de una columna, 3 para dos columnas desde 48 rem y 3 para tres columnas desde 75 rem.
+- **Clases en esta versión Bootstrap:** cada una de las 7 tarjetas usa `col-12 col-sm-6 col-lg-4 col-xl-3` (4 clases por tarjeta; 28 usos en total). El contenedor añade `container`, `row` y el gutter `g-4`. No se añadió CSS propio ni se enlazó `styles.css`.
+- **Qué dio Bootstrap sin esfuerzo:** puntos de quiebre estándar para una, dos, tres y cuatro columnas; separación consistente entre tarjetas; contenedor adaptable, estilos de tarjeta, tipografía y espaciado. El CSS y el bundle JavaScript se cargan desde el CDN oficial 5.3.8.
+- **Qué control se pierde:** frente a las reglas propias, se reduce el control fino del diseño de tarjetas, colores, tipografía, separación y apariencia de imágenes; para cambiar esos detalles hay que elegir utilidades/componentes de Bootstrap o añadir CSS propio, lo que esta página de prueba evita deliberadamente.
+- **Comprobación:** en modo dispositivo se verificaron 375, 576, 991, 992, 1199 y 1200 px; la flota mostró respectivamente 1, 2, 2, 3, 3 y 4 columnas. Las siete imágenes cargaron y no hubo solicitudes fallidas, respuestas HTTP de error ni errores de consola para CSS/JS del CDN.

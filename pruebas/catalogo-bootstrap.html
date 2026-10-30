@@ -1,63 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prueba|Catalogo</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Catálogo de bicicletas | Rueda Libre</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
-    <main>
-        <section class="services">
-            <h2>Nuestra flota</h2>
-            <div class="service-grid">
-                <article class="service-card">
-                    <h2>Urbana Clasica</h2>
-                    <p>Cómoda y liviana para las ciclorrutas.</p>
-                    <p class="precio">$10.000</p>
-                    <img class="bike-image" src="../img/bici-urbana.jpg" alt="Bicicletas disponibles para alquilar">
-                </article>
-                <article class="service-card">
-                    <h2>Urbana plegable</h2>
-                    <p>Se dobla en segundos, Ideal para combinar con el metro.</p>
-                    <p class="precio">$12.000</p>
-                    <img class="bike-image" src="../img/plegable.jpeg" alt="Bicicletas disponibles para alquilar">
-                </article>
-                <article class="service-card">
-                    <h2>Montaña Trail</h2>
-                    <p>Suspencion delantera y 21 cambios para las subidas.</p>
-                    <p class="precio">$15.000</p>
-                    <img class="bike-image" src="../img/images.jpeg" alt="Bicicletas disponibles para alquilar">
-                </article>
-                <article class="service-card">
-                    <h2>Gravel Aventura</h2>
-                    <p>Para rutas mixtas de asfalto y destapado.</p>
-                    <p class="precio">$18.000</p>
-                    <img class="bike-image" src="../img/gravel.webp" alt="Bicicletas disponibles para alquilar">
-                </article>
-                <article class="service-card">
-                    <h2>Electrica Urbana</h2>
-                    <p>Asistencia electrcina con 45 km de autonomia.</p>
-                    <p class="precio">$25.000</p>
-                    <img class="bike-image" src="../img/bici-electrica.jpg" alt="Bicicletas disponibles para alquilar">
-                </article>
-                <article class="service-card">
-                    <h2>Infantil</h2>
-                    <p>Para niños de 6 a 10 años.</p>
-                    <p class="precio">$8.000</p>
-                    <img class="bike-image" src="../img/infantil.jpg" alt="Bicicletas disponibles para alquilar">
-                </article>
-                <article class="service-card">
-                    <h2>Tandem</h2>
-                    <p>Para dos personas; perfecta para pasear en pareja</p>
-                    <p class="precio">$20.000</p>
-                    <img class="bike-image" src="../img/tandem.jpeg" alt="Bicicletas disponibles para alquilar">
-                </article>
+    <main class="container py-4">
+        <section aria-labelledby="fleet-heading">
+            <h1 id="fleet-heading" class="mb-4 text-center">Nuestra flota</h1>
+            <div class="row g-4">
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="card h-100">
+                        <img class="card-img-top" src="../img/bici-urbana.jpg" alt="Bicicleta urbana clásica">
+                        <div class="card-body text-center">
+                            <h2 class="card-title">Urbana Clásica</h2>
+                            <p class="card-text">Cómoda y liviana para las ciclorrutas.</p>
+                            <p class="mb-0 fw-bold">$10.000</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="card h-100">
+                        <img class="card-img-top" src="../img/plegable.jpeg" alt="Bicicleta urbana plegable">
+                        <div class="card-body text-center">
+                            <h2 class="card-title">Urbana Plegable</h2>
+                            <p class="card-text">Se dobla en segundos, ideal para combinar con el metro.</p>
+                            <p class="mb-0 fw-bold">$12.000</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="card h-100">
+                        <img class="card-img-top" src="../img/images.jpeg" alt="Bicicleta de montaña Trail">
+                        <div class="card-body text-center">
+                            <h2 class="card-title">Montaña Trail</h2>
+                            <p class="card-text">Suspensión delantera y 21 cambios para las subidas.</p>
+                            <p class="mb-0 fw-bold">$15.000</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="card h-100">
+                        <img class="card-img-top" src="../img/gravel.webp" alt="Bicicleta Gravel Aventura">
+                        <div class="card-body text-center">
+                            <h2 class="card-title">Gravel Aventura</h2>
+                            <p class="card-text">Para rutas mixtas de asfalto y destapado.</p>
+                            <p class="mb-0 fw-bold">$18.000</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="card h-100">
+                        <img class="card-img-top" src="../img/bici-electrica.jpg" alt="Bicicleta eléctrica urbana">
+                        <div class="card-body text-center">
+                            <h2 class="card-title">Eléctrica Urbana</h2>
+                            <p class="card-text">Asistencia eléctrica con 45 km de autonomía.</p>
+                            <p class="mb-0 fw-bold">$25.000</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="card h-100">
+                        <img class="card-img-top" src="../img/infantil.jpg" alt="Bicicleta infantil">
+                        <div class="card-body text-center">
+                            <h2 class="card-title">Infantil</h2>
+                            <p class="card-text">Para niños de 6 a 10 años.</p>
+                            <p class="mb-0 fw-bold">$8.000</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="card h-100">
+                        <img class="card-img-top" src="../img/tandem.jpeg" alt="Bicicleta tándem para dos personas">
+                        <div class="card-body text-center">
+                            <h2 class="card-title">Tándem</h2>
+                            <p class="card-text">Para dos personas; perfecta para pasear en pareja.</p>
+                            <p class="mb-0 fw-bold">$20.000</p>
+                        </div>
+                    </article>
+                </div>
             </div>
-
         </section>
-
     </main>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
