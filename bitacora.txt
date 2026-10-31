@@ -142,6 +142,17 @@ Se comprobó la página de inicio, tarifas y reservas en Chromium con viewports 
 - **Qué dio Bootstrap sin esfuerzo:** puntos de quiebre estándar para una, dos, tres y cuatro columnas; separación consistente entre tarjetas; contenedor adaptable, estilos de tarjeta, tipografía y espaciado. El CSS y el bundle JavaScript se cargan desde el CDN oficial 5.3.8.
 - **Qué control se pierde:** frente a las reglas propias, se reduce el control fino del diseño de tarjetas, colores, tipografía, separación y apariencia de imágenes; para cambiar esos detalles hay que elegir utilidades/componentes de Bootstrap o añadir CSS propio, lo que esta página de prueba evita deliberadamente.
 - **Comprobación:** en modo dispositivo se verificaron 375, 576, 991, 992, 1199 y 1200 px; la flota mostró respectivamente 1, 2, 2, 3, 3 y 4 columnas. Las siete imágenes cargaron y no hubo solicitudes fallidas, respuestas HTTP de error ni errores de consola para CSS/JS del CDN.
+
+## Utilidades Bootstrap para beneficios y reservas
+
+Consulté la documentación oficial de Bootstrap 5.3 (utilidades de espaciado, display, flex y colores) para construir la sección de beneficios y la franja de reservas sin CSS propio:
+
+- `col-md-6`: ocupa la mitad de la fila desde el breakpoint `md`; con `col-12`, cada beneficio ocupa todo el ancho en celular.
+- `d-none d-md-block`: oculta el elemento decorativo en celular y lo muestra como bloque desde `md`.
+- `flex-column flex-md-row`: apila el contenido en celular y lo dispone en fila desde `md`.
+- `gap-4`: establece separación uniforme entre elementos del contenedor flex.
+- `text-bg-dark`: aplica de forma conjunta fondo oscuro y texto claro, con el contraste definido por Bootstrap.
+
 ## Integración de Bootstrap en la página de inicio
 
 Bootstrap 5.3.8 se carga antes de `style_prueba.css`, que es la hoja existente compartida por el sitio (no existe un archivo `styles.css`). La portada, servicios, flota, rutas y beneficios ahora usan `container`, `row`, columnas responsivas, gutters y utilidades. Se retiraron las reglas de distribución propias que Inicio dejó de usar; las reglas de tablas, tarifas y reservas permanecen señaladas en la hoja.
