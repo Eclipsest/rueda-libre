@@ -4,114 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarifas | Rueda Libre</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../style_prueba.css">
     <link rel="icon" href="../img/favicon.jpg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
-<body>
-     <header class="site-header">
-        <a class="logo" href="../index.html">🛞Rueda Libre🛞</a>
-        <nav class="menu" aria-label="Navegación principal">
-            <ul class="menu-list" id="menu">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="tarifas.html" aria-current="page">Tarifas</a></li>
-                <li><a href="reservas.html">Reservas</a></li>
-            </ul>
-        </nav>
+<body class="d-flex flex-column min-vh-100">
+    <header class="site-header">
+        <div class="container d-flex flex-column flex-md-row justify-content-md-between align-items-center gap-2 py-2">
+            <a class="logo" href="../index.html">🛞Rueda Libre🛞</a>
+            <nav class="menu" aria-label="Navegación principal">
+                <ul class="menu-list list-unstyled d-flex flex-column flex-md-row align-items-center gap-2 mb-0" id="menu">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="tarifas.html" aria-current="page">Tarifas</a></li>
+                    <li><a href="reservas.html">Reservas</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main >
-        <h1>Tarifas de Alquiler de Bicicletas</h1>
-        <p>A continuación, se presentan nuestras tarifas para el alquiler de bicicletas:</p>
-        <section aria-labelledby="tarifas-bicicletas">
-            <h2 id="tarifas-bicicletas">Alquiler de bicicletas</h2>
-            <table>
-                <caption>Tarifas de Alquiler de Bicicletas</caption>
-                <thead>
-                    <tr>
-                        <th scope="col">Tipo de Bicicleta</th>
-                        <th scope="col">1 hora</th>
-                        <th scope="col">Medio dia (4h)</th>
-                        <th scope="col">Dia completo</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Urbana</td>
-                        <td>$10.000 COP</td>
-                        <td>$30.000 COP</td>
-                        <td>$50.000 COP</td>
-                    </tr>
-                    <tr>
-                        <td>Montaña</td>
-                        <td>$15.000 COP</td>
-                        <td>$45.000 COP</td>
-                        <td>$70.000 COP</td>
-                    </tr>
-                    <tr>
-                        <td>Electrica</td>
-                        <td>$25.000 COP</td>
-                        <td>$70.000 COP</td>
-                        <td>$110.000 COP</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        <section aria-labelledby="tarifas-recorridos">
-            <h2 id="tarifas-recorridos">Recorridos guiados</h2>
-            <table id="Tabla recorridos">
-                <caption>Tarifas de Recorridos Guiados</caption>
-                <thead>
-                    <tr>
-                        <th scope="col">Recorrido</th>
-                        <th scope="col">Distancia</th>
-                        <th scope="col">Duracion</th>
-                        <th scope="col">Nivel</th>
-                        <th scope="col">Precio por persona</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Rio y Parques</td>
-                        <td>12 km</td>
-                        <td>2 horas</td>
-                        <td>Fácil</td>
-                        <td>$45.000 COP</td>
-                    </tr>
-                    <tr>
-                        <td>Sabores de Barrio</td>
-                        <td>18 km</td>
-                        <td>3 horas</td>
-                        <td>Intermedio</td>
-                        <td>$60.000 COP</td>
-                    </tr>
-                    <tr>
-                        <td>Reto las palmas</td>
-                        <td>25 km</td>
-                        <td>4 horas</td>
-                        <td>Difícil</td>
-                        <td>$85.000 COP</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        <aside aria-labelledby="recomendaciones">
-            <p>Todas las tarifas incluyen casco y candado. Los recorridos salen sábados y domingos a las 7:00 a. m.</p>
-             <h2 id="recomendaciones">Antes de salir</h2>
-            <h3>Qué llevar</h3>
-            <ul>
-                <li>Ropa cómoda</li>
-                <li>Agua</li>
-                <li>Protector solar</li>
-                <li>Documento de identidad</li>
-            </ul>
-        </aside>
-        <a href="../index.html">Volver a la página principal</a>
-    </main>
-    <a class="whatsapp-link" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-    <footer>
-        <ul class="footer-list">
+    <main class="container py-4 flex-grow-1">
+            <div class="row g-4">
+                <header class="col-12">
+                    <h1>Tarifas de Alquiler de Bicicletas</h1>
+                    <p>A continuación, se presentan nuestras tarifas para el alquiler de bicicletas:</p>
+                </header>
+                <div class="col-12 col-lg-8">
+                    <div class="row g-4">
+                        <section class="col-12" aria-labelledby="tarifas-bicicletas">
+                            <h2 id="tarifas-bicicletas">Alquiler de bicicletas</h2>
+                            <div class="table-responsive">
+                                <table>
+                                    <caption>Tarifas de Alquiler de Bicicletas</caption>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Tipo de Bicicleta</th>
+                                            <th scope="col">1 hora</th>
+                                            <th scope="col">Medio dia (4h)</th>
+                                            <th scope="col">Dia completo</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Urbana</td>
+                                            <td>$10.000 COP</td>
+                                            <td>$30.000 COP</td>
+                                            <td>$50.000 COP</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Montaña</td>
+                                            <td>$15.000 COP</td>
+                                            <td>$45.000 COP</td>
+                                            <td>$70.000 COP</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Electrica</td>
+                                            <td>$25.000 COP</td>
+                                            <td>$70.000 COP</td>
+                                            <td>$110.000 COP</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                        <section class="col-12" aria-labelledby="tarifas-recorridos">
+                            <h2 id="tarifas-recorridos">Recorridos guiados</h2>
+                            <div class="table-responsive">
+                                <table id="tabla-recorridos">
+                                    <caption>Tarifas de Recorridos Guiados</caption>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Recorrido</th>
+                                            <th scope="col">Distancia</th>
+                                            <th scope="col">Duracion</th>
+                                            <th scope="col">Nivel</th>
+                                            <th scope="col">Precio por persona</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Rio y Parques</td>
+                                            <td>12 km</td>
+                                            <td>2 horas</td>
+                                            <td>Fácil</td>
+                                            <td>$45.000 COP</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sabores de Barrio</td>
+                                            <td>18 km</td>
+                                            <td>3 horas</td>
+                                            <td>Intermedio</td>
+                                            <td>$60.000 COP</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Reto las palmas</td>
+                                            <td>25 km</td>
+                                            <td>4 horas</td>
+                                            <td>Difícil</td>
+                                            <td>$85.000 COP</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <aside class="col-12 col-lg-4" aria-labelledby="recomendaciones">
+                    <div class="card h-100 p-3">
+                        <p>Todas las tarifas incluyen casco y candado. Los recorridos salen sábados y domingos a las 7:00 a. m.</p>
+                        <h2 id="recomendaciones">Antes de salir</h2>
+                        <h3>Qué llevar</h3>
+                        <ul>
+                            <li>Ropa cómoda</li>
+                            <li>Agua</li>
+                            <li>Protector solar</li>
+                            <li>Documento de identidad</li>
+                        </ul>
+                    </div>
+                </aside>
+                <div class="col-12">
+                    <a class="cta-button" href="../index.html">Volver a la página principal</a>
+                </div>
+            </div>
+        </main>
+        <a class="whatsapp-link position-fixed bottom-0 end-0 m-3 z-3" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <footer class="mt-5">
+            <ul class="footer-list list-unstyled container d-flex flex-column flex-md-row flex-wrap justify-content-center align-items-center gap-2 mb-0 py-4">
             <li>&copy; 2026 Rueda Libre</li>
             <li><a href="mailto:info@ruedalibre.com">info@ruedalibre.com</a></li>
             <li>Lunes a viernes:</li>
