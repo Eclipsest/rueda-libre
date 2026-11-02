@@ -44,12 +44,6 @@ a {
     transition: background-color 160ms ease, color 160ms ease;
 }
 
-a:hover,
-.menu-list a[aria-current="page"] {
-    background-color: var(--color-naranja-pedal);
-    color: var(--color-azul-noche);
-}
-
 a:hover {
     text-decoration: underline;
 }
@@ -65,37 +59,54 @@ a:focus-visible,
     border-bottom: 0.0625rem solid var(--color-gris-asfalto);
 }
 
-.logo {
+.navbar .navbar-brand.logo {
     padding: 0.7rem 1.15rem;
     border-radius: 0.5rem;
-    font-weight: 700;
-    text-align: center;
-}
-
-.menu-list a {
-    padding: 0.7rem 1.15rem;
-    border-radius: 0.5rem;
-    font-weight: 700;
-}
-
-.cta-button {
-    padding: 0.75rem 1.25rem;
-    border-radius: 0.4375rem;
-    background-color: var(--color-verde-ruta);
+    background-color: transparent;
     color: #FFFFFF;
     font-weight: 700;
     text-align: center;
-    transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
 }
 
-.cta-button:hover {
+.navbar .nav-link {
+    padding: 0.7rem 1.15rem;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
     background-color: var(--color-naranja-pedal);
     color: var(--color-azul-noche);
+}
+
+a.btn:hover {
     text-decoration: none;
 }
 
-.cta-button:active {
-    transform: translateY(0.0625rem);
+.btn-success {
+    --bs-btn-color: #FFFFFF;
+    --bs-btn-bg: var(--color-verde-ruta);
+    --bs-btn-border-color: var(--color-verde-ruta);
+    --bs-btn-hover-color: var(--color-azul-noche);
+    --bs-btn-hover-bg: var(--color-naranja-pedal);
+    --bs-btn-hover-border-color: var(--color-naranja-pedal);
+    --bs-btn-active-color: var(--color-azul-noche);
+    --bs-btn-active-bg: var(--color-naranja-pedal);
+    --bs-btn-active-border-color: var(--color-naranja-pedal);
+}
+
+.btn-outline-success {
+    --bs-btn-color: var(--color-verde-ruta);
+    --bs-btn-border-color: var(--color-verde-ruta);
+    --bs-btn-hover-color: #FFFFFF;
+    --bs-btn-hover-bg: var(--color-verde-ruta);
+    --bs-btn-hover-border-color: var(--color-verde-ruta);
+    --bs-btn-active-color: #FFFFFF;
+    --bs-btn-active-bg: var(--color-verde-ruta);
+    --bs-btn-active-border-color: var(--color-verde-ruta);
 }
 
 .new-badge {
@@ -257,12 +268,6 @@ th {
 }
 
 .whatsapp-link {
-    padding: 0.75rem 1rem;
-    border: 0.125rem solid var(--color-crema);
-    border-radius: 62.4375rem;
-    background-color: var(--color-verde-ruta);
-    color: #FFFFFF;
-    font-weight: 700;
     box-shadow: 0 0.125rem 0.5rem rgb(20 33 61 / 25%);
 }
 
