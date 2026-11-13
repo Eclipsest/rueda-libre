@@ -53,12 +53,14 @@ a:focus-visible,
     outline-offset: 0.1875rem;
 }
 
-.site-header {
+.site-header,
+.encabezado-sitio {
     background-color: var(--color-azul-noche);
     border-bottom: 0.0625rem solid var(--color-gris-asfalto);
 }
 
-.navbar .navbar-brand.logo {
+.navbar .navbar-brand.logo,
+.navbar .navbar-brand.logotipo {
     padding: 0.7rem 1.15rem;
     border-radius: 0.5rem;
     background-color: transparent;
@@ -159,30 +161,36 @@ th {
     text-align: center;
 }
 
-.form-intro {
+.form-intro,
+.introduccion-formulario {
     color: var(--color-gris-asfalto);
     text-align: center;
 }
 
-.form-group {
+.form-group,
+.grupo-formulario {
     padding: 1rem;
     border: 0.0625rem solid var(--color-gris-asfalto);
     border-radius: 0.75rem;
 }
 
 .form-group legend,
-.choice-group legend {
+.grupo-formulario legend,
+.choice-group legend,
+.grupo-opciones legend {
     padding: 0 0.4rem;
     color: var(--color-azul-noche);
     font-weight: 700;
 }
 
-.form-field {
+.form-field,
+.campo-formulario {
     color: var(--color-azul-noche);
     font-weight: 700;
 }
 
-.form-field small {
+.form-field small,
+.campo-formulario small {
     color: var(--color-gris-asfalto);
     font-size: 0.9em;
     font-weight: 400;
@@ -190,7 +198,10 @@ th {
 
 .form-field input,
 .form-field select,
-.form-field textarea {
+.form-field textarea,
+.campo-formulario input,
+.campo-formulario select,
+.campo-formulario textarea {
     padding: 0.75rem 0.85rem;
     border-color: var(--color-gris-asfalto);
     border-radius: 0.4375rem;
@@ -201,34 +212,44 @@ th {
 }
 
 .form-field input::placeholder,
-.form-field textarea::placeholder {
+.form-field textarea::placeholder,
+.campo-formulario input::placeholder,
+.campo-formulario textarea::placeholder {
     color: var(--color-gris-asfalto);
 }
 
 .form-field input:focus-visible,
 .form-field select:focus-visible,
 .form-field textarea:focus-visible,
-.choice-option input:focus-visible {
+.campo-formulario input:focus-visible,
+.campo-formulario select:focus-visible,
+.campo-formulario textarea:focus-visible,
+.choice-option input:focus-visible,
+.opcion-formulario input:focus-visible {
     outline: 0.1875rem solid var(--color-azul-noche);
     outline-offset: 0.125rem;
 }
 
-.form-field textarea {
+.form-field textarea,
+.campo-formulario textarea {
     min-height: 6.875rem;
     resize: vertical;
 }
 
-.choice-group {
+.choice-group,
+.grupo-opciones {
     padding: 0.75rem;
     border: 0.0625rem solid var(--color-gris-asfalto);
     border-radius: 0.5rem;
 }
 
-.choice-option {
+.choice-option,
+.opcion-formulario {
     color: var(--color-azul-noche);
 }
 
-.choice-option input {
+.choice-option input,
+.opcion-formulario input {
     accent-color: var(--color-naranja-pedal);
 }
 
@@ -253,20 +274,24 @@ th {
     transform: translateY(0.0625rem);
 }
 
-.reservation-hours {
+.reservation-hours,
+.horario-reservas {
     color: var(--color-azul-noche);
     overflow-wrap: anywhere;
 }
 
-.reservation-hours h2 {
+.reservation-hours h2,
+.horario-reservas h2 {
     text-align: center;
 }
 
-.reservation-hours dt {
+.reservation-hours dt,
+.horario-reservas dt {
     font-weight: 700;
 }
 
-.whatsapp-link {
+.whatsapp-link,
+.enlace-whatsapp {
     box-shadow: 0 0.125rem 0.5rem rgb(20 33 61 / 25%);
 }
 

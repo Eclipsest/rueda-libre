@@ -12,10 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 <body class="d-flex flex-column min-vh-100">
-    <header class="site-header">
+    <header class="encabezado-sitio">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
-                <a class="navbar-brand logo" href="../index.html">🛞Rueda Libre🛞</a>
+                <a class="navbar-brand logotipo" href="../index.html">🛞Rueda Libre🛞</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Mostrar u ocultar navegación">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -34,79 +34,88 @@
     <main class="container py-4 flex-grow-1">
         <div class="row g-4 align-items-start">
             <section class="col-12 col-md-8" aria-labelledby="titulo-reserva">
-                <form class="formulario d-flex flex-column gap-3 p-3 p-md-4" method="post">
+                <div class="alert alert-info alert-dismissible fade show" role="alert">
+                    Recuerda traer tu documento de identidad original para recoger la bicicleta.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar aviso"></button>
+                </div>
+                <form class="formulario needs-validation d-flex flex-column gap-3 p-3 p-md-4" method="post" novalidate>
                 <h1 id="titulo-reserva">Formulario de reserva</h1>
-                <p class="form-intro mb-0">Completa tus datos y cuéntanos qué bicicleta quieres reservar.</p>
+                <p class="introduccion-formulario mb-0">Completa tus datos y cuéntanos qué bicicleta quieres reservar.</p>
 
-                <fieldset class="form-group d-flex flex-column gap-3 m-0">
+                <fieldset class="grupo-formulario d-flex flex-column gap-3 m-0">
                     <legend>Reserva</legend>
                     <div class="row g-3">
                         <div class="col-12 col-sm-6">
-                            <label class="form-field d-flex flex-column gap-2" for="fecha">
+                            <label class="campo-formulario form-label d-flex flex-column gap-2" for="fecha">
                                 Fecha de alquiler
                                 <input class="form-control" type="date" id="fecha" name="fecha" min="2026-11-01" max="2026-12-31" required>
+                                <div class="invalid-feedback">Selecciona una fecha entre el 1 de noviembre y el 31 de diciembre de 2026.</div>
                             </label>
                         </div>
                         <div class="col-12 col-sm-6">
-                            <label class="form-field d-flex flex-column gap-2" for="bicicleta">
+                            <label class="campo-formulario form-label d-flex flex-column gap-2" for="bicicleta">
                                 Tipo de bicicleta
                                 <select class="form-select" id="bicicleta" name="bicicleta" required>
-                                <option value="" selected disabled>Selecciona una bicicleta</option>
-                                <option value="urbana">Urbana</option>
-                                <option value="montana">Montaña</option>
-                                <option value="electrica">Eléctrica</option>
+                                    <option value="" selected disabled>Selecciona una bicicleta</option>
+                                    <option value="urbana">Urbana</option>
+                                    <option value="montana">Montaña</option>
+                                    <option value="electrica">Eléctrica</option>
                                 </select>
+                                <div class="invalid-feedback">Elige el tipo de bicicleta que quieres reservar.</div>
                             </label>
                         </div>
                     </div>
 
-                    <fieldset class="choice-group d-flex flex-column gap-2">
+                    <fieldset class="grupo-opciones d-flex flex-column gap-2">
                         <legend>Plan</legend>
-                        <label class="choice-option form-check" for="duracion-hora">
+                        <div class="form-check">
                             <input class="form-check-input" type="radio" id="duracion-hora" name="duracion" value="1-hora" required>
-                            1 hora
-                        </label>
-                        <label class="choice-option form-check" for="duracion-medio-dia">
+                            <label class="opcion-formulario form-check-label" for="duracion-hora">1 hora</label>
+                            <div class="invalid-feedback">Selecciona un plan de alquiler.</div>
+                        </div>
+                        <div class="form-check">
                             <input class="form-check-input" type="radio" id="duracion-medio-dia" name="duracion" value="medio-dia">
-                            Medio día (4 horas)
-                        </label>
-                        <label class="choice-option form-check" for="duracion-dia">
+                            <label class="opcion-formulario form-check-label" for="duracion-medio-dia">Medio día (4 horas)</label>
+                        </div>
+                        <div class="form-check">
                             <input class="form-check-input" type="radio" id="duracion-dia" name="duracion" value="dia-completo">
-                            Día completo
-                        </label>
+                            <label class="opcion-formulario form-check-label" for="duracion-dia">Día completo</label>
+                        </div>
                     </fieldset>
 
                     <div class="row g-3">
                         <div class="col-12 col-sm-6">
-                            <label class="form-field d-flex flex-column gap-2" for="bicicleta-cant">
+                            <label class="campo-formulario form-label d-flex flex-column gap-2" for="bicicleta-cant">
                                 Cantidad de bicicletas
                                 <select class="form-select" id="bicicleta-cant" name="bicicleta-cant" required>
-                                <option value="" selected disabled>Selecciona la cantidad</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
+                                    <option value="" selected disabled>Selecciona la cantidad</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
                                 </select>
+                                <div class="invalid-feedback">Selecciona cuántas bicicletas necesitas.</div>
                             </label>
                         </div>
                         <div class="col-12 col-sm-6">
-                            <label class="form-field d-flex flex-column gap-2" for="recorrido">
+                            <label class="campo-formulario form-label d-flex flex-column gap-2" for="recorrido">
                                 Recorrido guiado
                                 <select class="form-select" id="recorrido" name="recorrido" required>
-                                <option value="" selected disabled>Selecciona el recorrido</option>
-                                <option value="rioparques">Rio y Parques</option>
-                                <option value="barrio">Sabores de Barrio</option>
-                                <option value="palmas">Reto las Palmas</option>
-                                <option value="ninguno">Ninguna ruta</option>
+                                    <option value="" selected disabled>Selecciona el recorrido</option>
+                                    <option value="rioparques">Rio y Parques</option>
+                                    <option value="barrio">Sabores de Barrio</option>
+                                    <option value="palmas">Reto las Palmas</option>
+                                    <option value="ninguno">Ninguna ruta</option>
                                 </select>
+                                <div class="invalid-feedback">Elige un recorrido o selecciona “Ninguna ruta”.</div>
                             </label>
                         </div>
                     </div>
-                    <fieldset class="form-group details-card d-flex flex-column gap-3 m-0">
+                    <fieldset class="grupo-formulario tarjeta-detalles d-flex flex-column gap-3 m-0">
                         <legend>Detalles adicionales</legend>
-                        <label class="form-field d-flex flex-column gap-2" for="comentario">
+                        <label class="campo-formulario form-label d-flex flex-column gap-2" for="comentario">
                             Comentarios <small>(opcional)</small>
                             <textarea class="form-control" id="comentario" name="comentario" placeholder="Indica el horario u otra información" maxlength="300"></textarea>
                         </label>
@@ -114,39 +123,47 @@
                 </fieldset>
 
                 <div class="d-flex flex-column gap-3">
-                    <fieldset class="form-group personal-data d-flex flex-column gap-3 m-0">
+                    <fieldset class="grupo-formulario datos-personales d-flex flex-column gap-3 m-0">
                         <legend>Tus datos</legend>
-                        <label class="form-field d-flex flex-column gap-2" for="nombre">
+                        <label class="campo-formulario form-label d-flex flex-column gap-2" for="nombre">
                             Nombre
                             <input class="form-control" type="text" id="nombre" name="nombre" placeholder="Nombre y apellidos" autocomplete="name" required minlength="3">
+                            <div class="invalid-feedback">Escribe tu nombre completo con al menos 3 caracteres.</div>
                         </label>
-                        <label class="form-field d-flex flex-column gap-2" for="email">
+                        <label class="campo-formulario form-label d-flex flex-column gap-2" for="email">
                             Correo electrónico
                             <input class="form-control" type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" autocomplete="email" required>
+                            <div class="invalid-feedback">Escribe un correo válido, por ejemplo tucorreo@ejemplo.com.</div>
                         </label>
                         <div class="row g-3">
                             <div class="col-12 col-sm-6">
-                                <label class="form-field d-flex flex-column gap-2" for="documento">
+                                <label class="campo-formulario form-label d-flex flex-column gap-2" for="documento">
                                     Documento
                                     <input class="form-control" type="text" inputmode="numeric" pattern="[0-9]+" placeholder="Ej: 1040203756" id="documento" name="documento" autocomplete="off" required minlength="6" maxlength="10">
+                                    <div class="invalid-feedback">Ingresa entre 6 y 10 dígitos para tu documento, sin puntos ni espacios.</div>
                                 </label>
                             </div>
                             <div class="col-12 col-sm-6">
-                                <label class="form-field d-flex flex-column gap-2" for="telefono">
+                                <label class="campo-formulario form-label d-flex flex-column gap-2" for="telefono">
                                     Celular
                                     <input class="form-control" type="tel" id="telefono" name="telefono" placeholder="Debe iniciar en 3" autocomplete="tel" required minlength="10" maxlength="10" pattern="3[0-9]+">
+                                    <div class="invalid-feedback">Ingresa un celular de 10 dígitos que comience por 3.</div>
                                 </label>
                             </div>
                         </div>
                     </fieldset>
 
                     <div>
-                        <fieldset class="form-group confirmation-card d-flex flex-column gap-3 m-0">
+                        <fieldset class="grupo-formulario tarjeta-confirmacion d-flex flex-column gap-3 m-0">
                             <legend>Confirmación</legend>
-                            <label class="choice-option form-check" for="confirmacion">
-                                <input class="form-check-input" type="checkbox" id="confirmacion" name="confirmacion" value="acepto" required>
-                                Estoy de acuerdo con las políticas de alquiler.
-                            </label>
+                            <div class="d-flex flex-wrap align-items-center gap-2">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="confirmacion" name="confirmacion" value="acepto" required>
+                                    <label class="opcion-formulario form-check-label" for="confirmacion">Estoy de acuerdo con las políticas de alquiler.</label>
+                                    <div class="invalid-feedback">Lee las políticas y marca la casilla para confirmar que estás de acuerdo.</div>
+                                </div>
+                                <a class="btn btn-outline-success" type="button" data-bs-toggle="modal" data-bs-target="#politicasModal">Ver políticas</a>
+                            </div>
                         </fieldset>
                     </div>
                     <button class="btn btn-success btn-lg" type="submit">Solicitar reserva</button>
@@ -154,8 +171,31 @@
             </form>
             </section>
 
+            <div class="modal fade" id="politicasModal" tabindex="-1" aria-labelledby="politicasModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title fs-5" id="politicasModalLabel">Políticas de alquiler</h2>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <ol>
+                                <li>Presenta tu documento de identidad original al recoger la bicicleta.</li>
+                                <li>Revisa la bicicleta con el asesor antes de salir.</li>
+                                <li>Cada 15 minutos de retraso en la devolución tienen un recargo de $5.000.</li>
+                                <li>Los daños por mal uso se cobran según el costo de la reparación.</li>
+                                <li>Los menores de edad deben estar acompañados por un adulto responsable.</li>
+                            </ol>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Entendido</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <aside class="col-12 col-md-4" aria-labelledby="horario-atencion">
-                <div class="reservation-hours card p-3 p-lg-4">
+                <div class="horario-reservas card p-3 p-lg-4">
                     <h2 id="horario-atencion">Horario de atención</h2>
                     <dl class="mb-0">
                         <dt>Lunes a viernes:</dt>
@@ -168,9 +208,9 @@
         </div>
     </main>
 
-    <a class="whatsapp-link btn btn-success btn-lg position-fixed bottom-0 end-0 m-3 z-3" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <a class="enlace-whatsapp btn btn-success btn-lg position-fixed bottom-0 end-0 m-3 z-3" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
     <footer class="mt-5">
-        <ul class="footer-list list-unstyled container d-flex flex-column flex-md-row flex-wrap justify-content-center align-items-center gap-2 mb-0 py-4">
+        <ul class="lista-pie list-unstyled container d-flex flex-column flex-md-row flex-wrap justify-content-center align-items-center gap-2 mb-0 py-4">
             <li>&copy; 2026 Rueda Libre</li>
             <li><a href="mailto:info@ruedalibre.com">info@ruedalibre.com</a></li>
             <li>Lunes a viernes:</li>
@@ -182,5 +222,23 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+        (() => {
+            'use strict'
+
+            const forms = document.querySelectorAll('.needs-validation')
+
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
 </body>
 </html>
