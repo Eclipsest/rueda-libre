@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#020617">
+    <title>Kit de componentes | Rueda Nocturna</title>
+    <link rel="stylesheet" href="src/output.css">
+</head>
+<body class="min-h-screen bg-slate-950 font-sans text-white antialiased">
+    <main class="mx-auto flex w-full max-w-6xl flex-col gap-12 px-5 py-10 sm:px-8 sm:py-16">
+        <header class="space-y-4">
+            <p class="text-sm font-bold uppercase tracking-widest text-emerald-300">Rueda Libre · Rueda Nocturna</p>
+            <h1 class="text-4xl font-black tracking-tight text-white sm:text-5xl">Kit de componentes</h1>
+            <p class="max-w-3xl text-lg leading-relaxed text-slate-300">Botones, cards, alertas y campos de formulario con una identidad visual compartida.</p>
+        </header>
+
+        <section aria-labelledby="botones-heading" class="space-y-4">
+            <h2 id="botones-heading" class="text-2xl font-bold text-white">Botones</h2>
+            <div class="flex flex-wrap gap-4">
+                <button class="inline-flex items-center justify-center rounded-full bg-emerald-400 px-6 py-3 text-sm font-bold tracking-wide text-slate-950 shadow-lg transition hover:bg-emerald-300 focus:outline-none focus:ring-4 focus:ring-emerald-200 focus:ring-offset-2 focus:ring-offset-slate-950" type="button">Principal</button>
+                <button class="inline-flex items-center justify-center rounded-full bg-amber-300 px-6 py-3 text-sm font-bold tracking-wide text-slate-950 shadow-lg transition hover:bg-amber-200 focus:outline-none focus:ring-4 focus:ring-amber-100 focus:ring-offset-2 focus:ring-offset-slate-950" type="button">Secundario</button>
+                <button class="inline-flex items-center justify-center rounded-full border border-slate-400 px-6 py-3 text-sm font-bold tracking-wide text-white transition hover:border-white hover:bg-white/10 focus:outline-none focus:ring-4 focus:ring-white/70 focus:ring-offset-2 focus:ring-offset-slate-950" type="button">Contorno</button>
+            </div>
+        </section>
+
+        <section id="card-ruta" aria-labelledby="card-heading" class="space-y-4">
+            <h2 id="card-heading" class="text-2xl font-bold text-white">Card de ruta</h2>
+            <article class="max-w-3xl overflow-hidden rounded-2xl border border-slate-700 bg-slate-800 shadow-lg transition-shadow duration-200 hover:border-emerald-300 hover:shadow-2xl">
+                <img class="h-52 w-full object-cover" src="../img/ruta1.jpeg" alt="Ciclista en un camino de montaña para la ruta Río y Parques">
+                <div class="space-y-6 p-6">
+                    <div class="flex flex-wrap items-center justify-between gap-4">
+                        <h3 class="text-2xl font-bold text-white">Río y Parques</h3>
+                        <span class="inline-flex rounded-full bg-emerald-300/15 px-3 py-1 text-xs font-bold uppercase tracking-wide text-emerald-200">Fácil</span>
+                    </div>
+                    <dl class="space-y-4">
+                        <div>
+                            <dt class="text-sm text-slate-400">Distancia</dt>
+                            <dd class="mt-2 text-base font-semibold text-white">12 km</dd>
+                        </div>
+                        <div>
+                            <dt class="text-sm text-slate-400">Duración</dt>
+                            <dd class="mt-2 text-base font-semibold text-white">2 horas</dd>
+                        </div>
+                        <div>
+                            <dt class="text-sm text-slate-400">Punto de encuentro</dt>
+                            <dd class="mt-2 text-base font-semibold text-white">Medellín · por confirmar</dd>
+                        </div>
+                    </dl>
+                    <div class="flex flex-wrap items-end justify-between gap-4 border-t border-slate-700 pt-5">
+                        <div>
+                            <p class="text-sm font-semibold text-slate-400">Precio por persona</p>
+                            <p class="mt-2 text-2xl font-black text-amber-300">$45.000 <span class="text-sm font-semibold">COP</span></p>
+                        </div>
+                        <a class="inline-flex items-center justify-center rounded-full bg-emerald-400 px-6 py-3 text-sm font-bold tracking-wide text-slate-950 shadow-lg transition hover:bg-emerald-300 focus:outline-none focus:ring-4 focus:ring-emerald-200 focus:ring-offset-2 focus:ring-offset-slate-800" href="../paginas/reservas.html">Reservar ahora</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section aria-labelledby="alertas-heading" class="space-y-4">
+            <h2 id="alertas-heading" class="text-2xl font-bold text-white">Alertas</h2>
+            <div class="space-y-4">
+                <div class="rounded-2xl border border-sky-300/30 border-l-4 border-l-sky-300 bg-sky-300/10 p-6 text-sky-100">
+                    <h3 class="text-lg font-bold text-sky-200">Información</h3>
+                    <p class="mt-2 leading-relaxed">Consulta los detalles de cada recorrido antes de reservar.</p>
+                </div>
+                <div role="alert" class="rounded-2xl border border-emerald-300/30 border-l-4 border-l-emerald-300 bg-emerald-300/10 p-6 text-emerald-100">
+                    <h3 class="text-lg font-bold text-emerald-200">Reserva confirmada</h3>
+                    <p class="mt-2 leading-relaxed">Recibirás los detalles de tu recorrido en el correo registrado.</p>
+                </div>
+                <div class="rounded-2xl border border-amber-300/30 border-l-4 border-l-amber-300 bg-amber-300/10 p-6 text-amber-100">
+                    <h3 class="text-lg font-bold text-amber-200">Advertencia</h3>
+                    <p class="mt-2 leading-relaxed">Llega con tiempo al punto de encuentro y usa casco durante el recorrido.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="campos" aria-labelledby="campos-heading" class="space-y-4">
+            <h2 id="campos-heading" class="text-2xl font-bold text-white">Campos de formulario</h2>
+            <form class="max-w-3xl space-y-6">
+                <div class="space-y-2">
+                    <label class="block text-sm font-semibold text-slate-200" for="correo">Correo electrónico</label>
+                    <input aria-describedby="correo-ayuda" autocomplete="email" class="w-full rounded-2xl border border-slate-600 bg-slate-900 px-4 py-3 text-base text-white placeholder:text-slate-500 transition hover:border-slate-400 focus:border-emerald-300 focus:outline-none focus:ring-4 focus:ring-emerald-200/50 focus:ring-offset-2 focus:ring-offset-slate-950" id="correo" name="correo" placeholder="tunombre@ejemplo.com" type="email">
+                    <p class="text-sm leading-relaxed text-slate-400" id="correo-ayuda">Usaremos este correo para enviarte la confirmación de la reserva.</p>
+                </div>
+                <div class="space-y-2">
+                    <label class="block text-sm font-semibold text-slate-200" for="celular">Celular</label>
+                    <input aria-describedby="celular-ayuda" autocomplete="tel" class="w-full rounded-2xl border border-slate-600 bg-slate-900 px-4 py-3 text-base text-white placeholder:text-slate-500 transition hover:border-slate-400 focus:border-emerald-300 focus:outline-none focus:ring-4 focus:ring-emerald-200/50 focus:ring-offset-2 focus:ring-offset-slate-950" id="celular" inputmode="tel" name="celular" placeholder="+57 300 123 4567" type="tel">
+                    <p class="text-sm leading-relaxed text-slate-400" id="celular-ayuda">Incluye el indicativo de tu país para que podamos contactarte.</p>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

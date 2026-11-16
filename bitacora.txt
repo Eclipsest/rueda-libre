@@ -218,3 +218,17 @@ Las combinaciones principales superan 4.5:1: texto Verde Ruta sobre crema 4.93:1
 - `src/output.css` incluye utilidades encontradas en el HTML, por ejemplo `.bg-slate-950`, y no incluye `.bg-pink-500`, que no se usa en los archivos fuente. Tailwind detecta las clases presentes en las fuentes y solo genera las utilidades necesarias; por eso una clase no usada no aparece en el CSS final y el archivo compilado ocupa menos.
 - Se añadieron variantes principal, secundaria y de contorno. Cada enlace tiene un cambio `hover:` y un anillo `focus:ring-*` con separación visible al navegar con teclado; el foco no queda sin indicador al retirar el outline predeterminado.
 - `nocturna/.gitignore` excluye `node_modules/`; se incluye `src/output.css` en el repositorio para que GitHub Pages pueda servir la página sin ejecutar la CLI.
+
+## Cards de rutas de Rueda Nocturna
+
+- Se reemplazaron las métricas de resumen por una sección con las tres rutas en columna. Las cards comparten estructura y clases base, muestran imagen uniforme, nivel escrito y con color, distancia, duración, punto de encuentro, precio y enlace principal para reservar.
+- Los datos de distancia, duración, nivel y precio corresponden a la tabla de recorridos existente. Como el punto de encuentro no está especificado en el sitio, se deja como «Medellín · por confirmar».
+- El hover aumenta la sombra y cambia el color del borde manteniendo su grosor, sin transformar ni desplazar la card. La presentación usa utilidades Tailwind; no se añadió CSS propio.
+
+## Reglas del kit de componentes Tailwind
+
+- **Radio:** `rounded-2xl` para cards, alertas y campos; `rounded-full` para los tres botones, que comparten forma de píldora.
+- **Espaciado:** escala Tailwind basada en múltiplos de `0.25rem`, con `gap-4` para grupos, `p-6` para contenedores y `px-6 py-3` para botones. Los campos usan `px-4 py-3`.
+- **Colores base:** `slate-950` para la página, `slate-800` para las cards, bordes `slate-700/600`, texto principal blanco y texto secundario `slate-300/400`.
+- **Acentos y estados:** esmeralda para la acción principal y éxito; ámbar para la acción secundaria, precio y advertencia; sky para información. Los botones tienen `hover:` y anillo `focus:` visible; los campos comparten borde, relleno y foco esmeralda.
+- La galería `nocturna/componentes.html` muestra los tres botones, la card Río y Parques, las alertas informativa/de éxito/de advertencia y los campos de correo y celular. La alerta de éxito usa `role="alert"`.
