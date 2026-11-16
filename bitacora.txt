@@ -232,3 +232,76 @@ Las combinaciones principales superan 4.5:1: texto Verde Ruta sobre crema 4.93:1
 - **Colores base:** `slate-950` para la página, `slate-800` para las cards, bordes `slate-700/600`, texto principal blanco y texto secundario `slate-300/400`.
 - **Acentos y estados:** esmeralda para la acción principal y éxito; ámbar para la acción secundaria, precio y advertencia; sky para información. Los botones tienen `hover:` y anillo `focus:` visible; los campos comparten borde, relleno y foco esmeralda.
 - La galería `nocturna/componentes.html` muestra los tres botones, la card Río y Parques, las alertas informativa/de éxito/de advertencia y los campos de correo y celular. La alerta de éxito usa `role="alert"`.
+
+## Layout de la landing Rueda Nocturna
+
+- La landing reúne encabezado con anclas, portada, tres rutas, cuatro pasos, franja de inscripción y pie de página. El encabezado y cada sección usan el mismo contenedor centrado `max-w-6xl mx-auto` con relleno lateral `px-5 sm:px-8`.
+- Las rutas usan una cuadrícula `lg:grid-cols-3`; en pantallas pequeñas se apilan para conservar legibilidad. Los pasos usan `grid-cols-2` desde `sm` y cuatro columnas desde `lg`: cada paso es una unidad breve e independiente, y la cuadrícula conserva orden de lectura, alineación y separación uniforme sin requerir el espacio horizontal de cuatro columnas en móvil.
+- Se reutilizaron las clases de botones y cards del kit de `componentes.html`, sin crear variantes visuales. El pie agrupa marca, enlaces y contacto en tres bloques con flex, que se apilan en pantallas pequeñas.
+
+## Auditoría responsive inicial a 360 px
+
+- Antes de los ajustes, la navegación de secciones permanecía visible en el celular. El encabezado usaba una fila con `flex-wrap` y mandaba la navegación a otra línea; no cumplía el diseño móvil compacto con solo logo y botón de inscripción.
+- El título principal medía 48 px y el espacio entre bloques era de 64 px (`gap-16`, además de 48 px de padding vertical), una escala amplia para la pantalla pequeña.
+- No había scroll horizontal: las tres rutas y los cuatro pasos ya se apilaban en una columna, las imágenes cargaban y las cards cabían en el ancho disponible. El problema observado era principalmente el encabezado y la escala de espaciado/tipografía, no contenido roto o recortado.
+
+### Verificación del layout por viewport
+
+| Ancho | Encabezado | Rutas | Pasos | Título principal | Scroll horizontal |
+|---:|---|---:|---:|---:|---|
+| 360 px | Apilado; enlaces ocultos y botón visible | 1 columna | 1 columna | 36 px | No |
+| 768 px | En fila; navegación visible | 2 columnas | 2 columnas | 60 px | No |
+| 1024 px | En fila; navegación visible | 3 columnas | 4 columnas | 72 px | No |
+| 1280 px | En fila; navegación visible | 3 columnas | 4 columnas | 72 px | No |
+
+Las imágenes de las tres rutas cargaron en los cuatro anchos. Se redujeron título, padding y separación en móvil y se aumentaron progresivamente con `sm:`, `md:` y `lg:`. La navegación del encabezado usa `hidden md:flex`; la cuadrícula de rutas usa base de una columna, `sm:grid-cols-2` y `lg:grid-cols-3`.
+
+## Tema de marca y modo oscuro de Rueda Nocturna
+
+- `nocturna/src/input.css` define con `@theme` Verde Ruta (`#1E7A4F`), Naranja Pedal (`#F39A2B`), Azul Noche (`#14213D`), Crema (`#FAF6EF`), Gris Asfalto (`#5B6470`) y Amarillo Farol (`#FFD166`), además de Montserrat y Open Sans. Ambas páginas cargan las fuentes desde Google Fonts; el navegador confirmó que las dos familias están disponibles.
+- La landing y `componentes.html` usan las utilidades de color y tipografía generadas por el tema. El modo oscuro sigue la preferencia del sistema (`prefers-color-scheme`) y ajusta fondos, textos, cards, alertas, bordes y campos. `src/output.css` incluye los estilos compilados para GitHub Pages; no quedan utilidades de colores genéricos de Tailwind en esas dos páginas. Los fondos blancos de algunas superficies en modo claro son intencionales.
+- Se revisaron las combinaciones de texto con el criterio WCAG AA de 4.5:1. En modo claro: Azul Noche sobre Crema 14.83:1; Gris Asfalto sobre Crema 5.57:1; Verde Ruta sobre Crema 4.93:1; Crema sobre Verde Ruta 4.93:1; Azul Noche sobre Naranja Pedal 7.20:1. La advertencia usa Azul Noche sobre el amarillo suave compuesto sobre Crema (13.99:1).
+- En modo oscuro, Crema sobre Gris Asfalto alcanza 5.57:1 y sobre Azul Noche 14.83:1. Se evita Verde Ruta sobre Azul Noche (3.01:1) y Gris Asfalto sobre Azul Noche (2.66:1) como texto: en las superficies oscuras se usa Crema. La etiqueta superior de la portada también se ajustó a Crema en oscuro para corregir su contraste.
+- En DevTools se emuló `prefers-color-scheme: dark` y se verificaron la landing y el kit en ambos temas, incluidos alertas, campos y placeholders. Los campos conservan anillo de foco visible; el CSS generado se recompiló desde la CLI.
+
+## Reutilización y decisión de framework
+
+### Repetición de clases en la landing
+
+Antes de extraer estilos, el HTML de `nocturna/index.html` repetía estas listas:
+
+| Lista medida antes del cambio | Veces |
+|---|---:|
+| Lista exacta larga del botón verde (`Explorar rutas` y tres `Reservar ahora`) | 4 |
+| Mismo botón verde con anillo de foco adaptado al encabezado | 1 adicional; 5 botones verdes en total |
+| Clases de la card de ruta | 3 |
+| Card de paso del proceso | 4 |
+| Etiqueta de datos de ruta (`text-sm text-gris-asfalto dark:text-crema`) | 9 |
+| Base de la etiqueta de nivel | 3 (las listas completas varían por dificultad) |
+| Enlace de navegación con hover y foco | 3 |
+| Campos de formulario | 0; la landing no incluye campos |
+
+Se extrajeron los cinco botones verdes a `.btn-primary` y el botón azul de inscripción a `.btn-contrast`, usando dos clases en `@layer components` con `@apply` (el máximo permitido era tres). Se mantuvieron en el HTML sus clases de foco, que varían para conservar el contraste con cada superficie. Las cards y sus clases base siguen en el marcado y se comparten entre las tres rutas. Las clases del HTML se ordenaron agrupando primero layout, espaciado, tipografía, color y estados.
+
+### Medición de recursos
+
+La CLI genera `nocturna/src/output.css` con `--minify`: **26.300 bytes (25,68 KiB)** en disco. En DevTools Network, al cargar la portada v2.0 de [Rueda Libre](https://eclipsest.github.io/rueda-libre/), Bootstrap 5.3.8 reportó:
+
+| Recurso Bootstrap | Transferencia (incluye cabeceras) | Cuerpo codificado | Tamaño decodificado |
+|---|---:|---:|---:|
+| `bootstrap.min.css` | 33.348 B | 33.048 B | 232.111 B |
+| `bootstrap.bundle.min.js` | 24.769 B | 24.469 B | 80.496 B |
+| **Total** | **58.117 B** | **57.517 B** | **312.607 B** |
+
+El CSS Tailwind se midió como archivo minificado local; la tabla de Bootstrap refleja la transferencia real observada en Network y sus tamaños de respuesta. Por ello, no se toma la diferencia como una comparación idéntica de compresión, pero sí muestra el costo del CSS y JavaScript de Bootstrap juntos frente al CSS generado para esta landing. La medición no incluye imágenes ni Google Fonts.
+
+### Bootstrap vs Tailwind y recomendación
+
+| Criterio | Experiencia con Bootstrap v2.0 | Experiencia con Tailwind en Rueda Nocturna |
+|---|---|---|
+| Curva de aprendizaje | Sus componentes, grilla y utilidades conocidas permiten montar rápidamente páginas con estructura convencional; hay que aprender sus convenciones y dependencias de componentes interactivos. | El resultado visual se compone utilidad por utilidad y el HTML se vuelve verboso si se repiten listas. La CLI, el tema y dos clases `@apply` resolvieron el flujo de producción y la repetición principal. |
+| Personalización | La paleta y componentes se adaptan con CSS/variables del tema, pero la hoja compartida sigue siendo necesaria para la identidad y componentes propios. En la migración de la hoja de distribución se pasó de 697 a 251 líneas (reducción de 64 %). | `@theme` genera utilidades de color y fuente de marca; `@apply` permite encapsular botones sin trasladar el estilo de las cards fuera del kit. `--minify` produjo 26.300 B para esta landing. |
+| Tamaño final | En la medición Network, CSS y bundle JavaScript transfirieron 58.117 B en conjunto (57.517 B de cuerpo codificado). | El CSS minificado local ocupa 26.300 B y la landing no necesita un bundle JavaScript de Tailwind. La medición local no incluye la compresión HTTP ni fuentes/imágenes. |
+| Casos de uso | Conveniente para mantener el sitio completo, con varias páginas, grillas y componentes interactivos compartidos, y aprovechar el sistema que ya funciona en v2.0. | Conveniente para micrositios o campañas con una identidad visual muy particular, donde interesa generar solo las utilidades usadas y ajustar el diseño con precisión. |
+
+**Recomendación:** mantener Bootstrap para la próxima versión integral de Rueda Libre. Aunque Tailwind dio un CSS minificado menor para esta landing y simplificamos los botones repetidos, la versión completa ya cubre varias páginas con la grilla y componentes Bootstrap, y la migración previa redujo en 64 % el CSS propio de distribución. Cambiar todo el sitio ahora obligaría a reconstruir y mantener esos componentes; Tailwind queda como buena opción para campañas independientes con diseño altamente personalizado.
