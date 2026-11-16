@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarifas | Rueda Libre</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../style_prueba.css">
+    <link rel="stylesheet" href="../styles.css">
     <link rel="icon" href="../img/favicon.jpg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,9 +23,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto gap-lg-2">
-                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="tarifas.html" aria-current="page">Tarifas</a></li>
-                        <li class="nav-item"><a class="nav-link" href="reservas.html">Reservas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../index.html"><i class="bi bi-house-door-fill me-1" aria-hidden="true"></i>Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="tarifas.html" aria-current="page"><i class="bi bi-tag-fill me-1" aria-hidden="true"></i>Tarifas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reservas.html"><i class="bi bi-calendar-check-fill me-1" aria-hidden="true"></i>Reservas</a></li>
                     </ul>
                 </div>
             </div>
@@ -32,13 +34,13 @@
     <main class="container py-4 flex-grow-1">
             <div class="row g-4">
                 <header class="col-12">
-                    <h1>Tarifas de Alquiler de Bicicletas</h1>
+                    <h1 class="text-primary">Tarifas de Alquiler de Bicicletas</h1>
                     <p>A continuación, se presentan nuestras tarifas para el alquiler de bicicletas:</p>
                 </header>
                 <div class="col-12 col-lg-8">
                     <div class="row g-4">
                         <section class="col-12" aria-labelledby="tarifas-bicicletas">
-                            <h2 id="tarifas-bicicletas">Alquiler de bicicletas</h2>
+                            <h2 id="tarifas-bicicletas" class="titulo-seccion">Alquiler de bicicletas</h2>
                             <div class="table-responsive">
                                 <table>
                                     <caption>Tarifas de Alquiler de Bicicletas</caption>
@@ -74,7 +76,7 @@
                             </div>
                         </section>
                         <section class="col-12" aria-labelledby="tarifas-recorridos">
-                            <h2 id="tarifas-recorridos">Recorridos guiados</h2>
+                            <h2 id="tarifas-recorridos" class="titulo-seccion">Recorridos guiados</h2>
                             <div class="table-responsive">
                                 <table id="tabla-recorridos">
                                     <caption>Tarifas de Recorridos Guiados</caption>
@@ -118,7 +120,7 @@
                 <aside class="col-12 col-lg-4" aria-labelledby="recomendaciones">
                     <div class="card h-100 p-3">
                         <p>Todas las tarifas incluyen casco y candado. Los recorridos salen sábados y domingos a las 7:00 a. m.</p>
-                        <h2 id="recomendaciones">Antes de salir</h2>
+                        <h2 id="recomendaciones" class="titulo-seccion">Antes de salir</h2>
                         <h3>Qué llevar</h3>
                         <ul>
                             <li>Ropa cómoda</li>
@@ -129,15 +131,15 @@
                     </div>
                 </aside>
                 <div class="col-12">
-                    <a class="btn btn-outline-success btn-lg" href="../index.html">Volver a la página principal</a>
+                    <a class="btn btn-outline-primary btn-lg" href="../index.html">Volver a la página principal</a>
                 </div>
             </div>
         </main>
-        <a class="whatsapp-link btn btn-success btn-lg position-fixed bottom-0 end-0 m-3 z-3" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-        <footer class="mt-5">
+        <a class="whatsapp-link btn btn-primary btn-lg position-fixed bottom-0 end-0 m-3 z-3" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp me-2" aria-hidden="true"></i>WhatsApp</a>
+        <footer class="pie-sitio mt-5">
             <ul class="footer-list list-unstyled container d-flex flex-column flex-md-row flex-wrap justify-content-center align-items-center gap-2 mb-0 py-4">
             <li>&copy; 2026 Rueda Libre</li>
-            <li><a href="mailto:info@ruedalibre.com">info@ruedalibre.com</a></li>
+            <li><a href="mailto:info@ruedalibre.com"><i class="bi bi-envelope-fill me-2" aria-hidden="true"></i>info@ruedalibre.com</a></li>
             <li>Lunes a viernes:</li>
             <li>7:00 a. m. - 7:00 p. m.</li>
             <li>Sábados, domingos y festivos:</li>

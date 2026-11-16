@@ -1,55 +1,70 @@
 <!DOCTYPE html>
-<html lang="es" data-bs-theme="dark">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de contacto | Rueda Libre</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style_prueba.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <header class="site-header">
-        <a class="logo" href="index.html">🛞Rueda Libre🛞</a>
-        <nav class="menu" aria-label="Navegación principal">
-            <ul class="menu-list" id="menu">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="paginas/tarifas.html">Tarifas</a></li>
-                <li><a href="paginas/reservas.html">Reservas</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand logo" href="index.html">🛞Rueda Libre🛞</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#contactNavbar" aria-controls="contactNavbar" aria-expanded="false" aria-label="Mostrar u ocultar navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="contactNavbar">
+                    <ul class="navbar-nav ms-auto gap-lg-2">
+                        <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door-fill me-1" aria-hidden="true"></i>Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="paginas/tarifas.html"><i class="bi bi-tag-fill me-1" aria-hidden="true"></i>Tarifas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="paginas/reservas.html"><i class="bi bi-calendar-check-fill me-1" aria-hidden="true"></i>Reservas</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <main class="form-page">
-        <form class="formulario">
-            <h1>Formulario de contacto</h1>
-            <p class="form-intro">Déjanos tus datos y cuéntanos cómo podemos ayudarte.</p>
+    <main class="container py-4 flex-grow-1">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <form class="formulario d-flex flex-column gap-3 p-3 p-md-4">
+                    <h1 class="text-primary text-center">Formulario de contacto</h1>
+                    <p class="form-intro mb-0">Déjanos tus datos y cuéntanos cómo podemos ayudarte.</p>
 
-            <label class="form-field" for="nombre">
-                Nombre
-                <input type="text" id="nombre" name="nombre" placeholder="Nombre y apellidos" autocomplete="name" required>
-            </label>
+                    <label class="form-field form-label d-flex flex-column gap-2" for="nombre">
+                        Nombre
+                        <input class="form-control" type="text" id="nombre" name="nombre" placeholder="Nombre y apellidos" autocomplete="name" required>
+                    </label>
 
-            <label class="form-field" for="email">
-                Correo electrónico
-                <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" autocomplete="email" required>
-            </label>
+                    <label class="form-field form-label d-flex flex-column gap-2" for="email">
+                        Correo electrónico
+                        <input class="form-control" type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" autocomplete="email" required>
+                    </label>
 
-            <label class="form-field" for="telefono">
-                Teléfono
-                <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono" autocomplete="tel" required>
-            </label>
+                    <label class="form-field form-label d-flex flex-column gap-2" for="telefono">
+                        Teléfono
+                        <input class="form-control" type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono" autocomplete="tel" required>
+                    </label>
 
-            <label class="form-field" for="documento">
-                Documento de identidad
-                <input type="text" id="documento" name="documento" placeholder="C.C. o T.I." autocomplete="off" required>
-            </label>
+                    <label class="form-field form-label d-flex flex-column gap-2" for="documento">
+                        Documento de identidad
+                        <input class="form-control" type="text" id="documento" name="documento" placeholder="C.C. o T.I." autocomplete="off" required>
+                    </label>
 
-            <label class="form-field" for="comentario">
-                Comentario <small>(opcional)</small>
-                <textarea id="comentario" name="comentario" placeholder="Escribe tu comentario"></textarea>
-            </label>
+                    <label class="form-field form-label d-flex flex-column gap-2" for="comentario">
+                        Comentario <small>(opcional)</small>
+                        <textarea class="form-control" id="comentario" name="comentario" placeholder="Escribe tu comentario"></textarea>
+                    </label>
 
-            <button type="submit">Enviar mensaje</button>
-        </form>
+                    <button class="btn btn-primary btn-lg" type="submit">Enviar mensaje</button>
+                </form>
+            </div>
+        </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -87,29 +87,6 @@ a.btn:hover {
     text-decoration: none;
 }
 
-.btn-success {
-    --bs-btn-color: #FFFFFF;
-    --bs-btn-bg: var(--color-verde-ruta);
-    --bs-btn-border-color: var(--color-verde-ruta);
-    --bs-btn-hover-color: var(--color-azul-noche);
-    --bs-btn-hover-bg: var(--color-naranja-pedal);
-    --bs-btn-hover-border-color: var(--color-naranja-pedal);
-    --bs-btn-active-color: var(--color-azul-noche);
-    --bs-btn-active-bg: var(--color-naranja-pedal);
-    --bs-btn-active-border-color: var(--color-naranja-pedal);
-}
-
-.btn-outline-success {
-    --bs-btn-color: var(--color-verde-ruta);
-    --bs-btn-border-color: var(--color-verde-ruta);
-    --bs-btn-hover-color: #FFFFFF;
-    --bs-btn-hover-bg: var(--color-verde-ruta);
-    --bs-btn-hover-border-color: var(--color-verde-ruta);
-    --bs-btn-active-color: #FFFFFF;
-    --bs-btn-active-bg: var(--color-verde-ruta);
-    --bs-btn-active-border-color: var(--color-verde-ruta);
-}
-
 .new-badge {
     padding: 0.25rem 0.65rem;
     border-radius: 62.4375rem;
@@ -167,14 +144,12 @@ th {
     text-align: center;
 }
 
-.form-group,
 .grupo-formulario {
     padding: 1rem;
     border: 0.0625rem solid var(--color-gris-asfalto);
     border-radius: 0.75rem;
 }
 
-.form-group legend,
 .grupo-formulario legend,
 .choice-group legend,
 .grupo-opciones legend {
@@ -251,27 +226,6 @@ th {
 .choice-option input,
 .opcion-formulario input {
     accent-color: var(--color-naranja-pedal);
-}
-
-.formulario button {
-    padding: 1rem 2rem;
-    border: 0;
-    border-radius: 0.4375rem;
-    background-color: var(--color-verde-ruta);
-    color: #FFFFFF;
-    font: inherit;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
-}
-
-.formulario button:hover {
-    background-color: var(--color-naranja-pedal);
-    color: var(--color-azul-noche);
-}
-
-.formulario button:active {
-    transform: translateY(0.0625rem);
 }
 
 .reservation-hours,

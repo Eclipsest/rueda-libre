@@ -1,0 +1,136 @@
+:root {
+    --color-verde-ruta: #1E7A4F;
+    --color-naranja-pedal: #F39A2B;
+    --color-azul-noche: #14213D;
+    --color-crema: #FAF6EF;
+    --color-gris-asfalto: #5B6470;
+    --bs-primary: var(--color-verde-ruta);
+    --bs-primary-rgb: 30, 122, 79;
+    --bs-body-font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    --bs-body-bg: var(--color-crema);
+    --bs-body-color: var(--color-azul-noche);
+    --bs-link-color: var(--color-verde-ruta);
+    --bs-link-color-rgb: 30, 122, 79;
+    --bs-link-hover-color: #145C3B;
+    --bs-link-hover-color-rgb: 20, 92, 59;
+    --bs-border-radius: 0.65rem;
+    --bs-border-radius-sm: 0.4rem;
+    --bs-border-radius-lg: 0.9rem;
+    --bs-border-radius-xl: 1.1rem;
+    --bs-border-radius-xxl: 2rem;
+    --bs-form-invalid-color: #A51D2D;
+}
+
+body {
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    font-family: var(--bs-body-font-family);
+}
+
+main a:not(.btn) {
+    padding: 0;
+    background-color: transparent;
+    color: var(--bs-link-color);
+}
+
+main a:not(.btn):hover {
+    color: var(--bs-link-hover-color);
+}
+
+.btn-primary {
+    --bs-btn-color: #FFFFFF;
+    --bs-btn-bg: var(--color-verde-ruta);
+    --bs-btn-border-color: var(--color-verde-ruta);
+    --bs-btn-hover-color: var(--color-azul-noche);
+    --bs-btn-hover-bg: var(--color-naranja-pedal);
+    --bs-btn-hover-border-color: var(--color-naranja-pedal);
+    --bs-btn-active-color: var(--color-azul-noche);
+    --bs-btn-active-bg: #E58A1D;
+    --bs-btn-active-border-color: #E58A1D;
+    --bs-btn-focus-shadow-rgb: 30, 122, 79;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--color-verde-ruta);
+    --bs-btn-border-color: var(--color-verde-ruta);
+    --bs-btn-hover-color: #FFFFFF;
+    --bs-btn-hover-bg: var(--color-verde-ruta);
+    --bs-btn-hover-border-color: var(--color-verde-ruta);
+    --bs-btn-active-color: #FFFFFF;
+    --bs-btn-active-bg: #145C3B;
+    --bs-btn-active-border-color: #145C3B;
+}
+
+.btn-naranja {
+    --bs-btn-color: var(--color-azul-noche);
+    --bs-btn-bg: var(--color-naranja-pedal);
+    --bs-btn-border-color: var(--color-naranja-pedal);
+    --bs-btn-hover-color: var(--color-azul-noche);
+    --bs-btn-hover-bg: #E58A1D;
+    --bs-btn-hover-border-color: #E58A1D;
+    --bs-btn-active-color: var(--color-azul-noche);
+    --bs-btn-active-bg: #CF7510;
+    --bs-btn-active-border-color: #CF7510;
+    --bs-btn-focus-shadow-rgb: 243, 154, 43;
+}
+
+.portada-promociones {
+    padding: 1rem;
+    border: 1px solid rgb(var(--bs-primary-rgb), 0.2);
+    border-radius: var(--bs-border-radius-lg);
+    background-color: #FFFFFF;
+    box-shadow: 0 0.5rem 1.5rem rgb(20 33 61 / 8%);
+}
+
+.titulo-seccion {
+    padding-inline-start: 0.75rem;
+    border-inline-start: 0.3rem solid var(--color-naranja-pedal);
+}
+
+.beneficio-icono {
+    display: inline-grid;
+    width: 3rem;
+    height: 3rem;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 1.4rem;
+}
+
+.pie-sitio {
+    border-top: 0.2rem solid var(--color-naranja-pedal);
+    background-color: var(--color-azul-noche);
+    color: var(--color-crema);
+}
+
+.pie-sitio a {
+    padding: 0.45rem 0.7rem;
+    border-radius: var(--bs-border-radius-sm);
+    background-color: var(--color-verde-ruta);
+    color: #FFFFFF;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.pie-sitio a:hover {
+    background-color: var(--color-naranja-pedal);
+    color: var(--color-azul-noche);
+}
+
+.precio {
+    color: var(--bs-primary);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 0.1875rem solid var(--color-azul-noche);
+    outline-offset: 0.1875rem;
+}
+
+@media (max-width: 575.98px) {
+    .portada-promociones {
+        padding: 0.5rem;
+    }
+}

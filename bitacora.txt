@@ -187,3 +187,19 @@ Los tiempos se reconstruyeron con las fechas del historial de GitHub; representa
 Inicio, Tarifas y Reservas se probaron en 360, 768 y 1280 px: Bootstrap cargó, no hubo desbordamiento horizontal ni imágenes rotas; las columnas de tarifas aparecen juntas desde `lg` y las de reservas en proporción 8/4 desde `md`. La validación nativa del formulario sigue activa (`novalidate` ausente): los 10 controles obligatorios, fechas mínima/máxima, longitudes, formato de correo, patrones de documento y teléfono, y aceptación de políticas se conservaron y se probaron.
 
 **Conclusión:** Bootstrap reemplaza mejor la distribución repetida y reduce la hoja en 64,0 %, mientras `style_prueba.css` conserva la identidad de Rueda Libre y los estilos de tabla de la semana 1. Para esta versión, la combinación de grilla Bootstrap con CSS propio limitado a la presentación es más sencilla de mantener y mantiene el control visual necesario. La v2.0-beta se publica en [GitHub Pages](https://eclipsest.github.io/rueda-libre/).
+
+## Semana: Personalización de marca y preparación de v2.0
+
+- Se creó `styles.css`, cargado después de Bootstrap, con variables `--bs-*` para Verde Ruta, el RGB del primario, tipografía, enlaces y radios; se personalizaron estados de `btn-primary` y se agregó `.btn-naranja`.
+- Se añadieron clases propias complementarias (`.portada-promociones`, `.titulo-seccion`, `.beneficio-icono`, `.pie-sitio`) sin modificar las clases del framework. `text-primary` y `bg-primary` usan Verde Ruta.
+- Se incorporó Bootstrap Icons por CDN en navegación, contacto, beneficios y enlaces de WhatsApp. Los íconos decorativos usan `aria-hidden="true"` y los controles solo-icono conservan su `aria-label`.
+- Se unificó también el formulario de contacto con Bootstrap y el tema de marca. El bundle de Bootstrap se carga una sola vez por página; no se modificó el CSS del framework ni se añadieron reglas `!important`.
+- Capturas comparativas guardadas en `img/capturas/antes.png` y `img/capturas/despues.png`.
+
+### Prueba final
+
+Las páginas de inicio, tarifas, reservas y contacto se probaron en viewports de 390, 768 y 1440 px, sin desbordamiento horizontal. La prueba de teclado confirmó foco visible de 3 px, apertura del menú colapsable y apertura/cierre del modal con Escape. La validación vacía de reservas muestra sus errores y no envía el formulario.
+
+Las combinaciones principales superan 4.5:1: texto Verde Ruta sobre crema 4.93:1, texto blanco sobre Verde Ruta 5.31:1, y Azul Noche sobre Naranja Pedal 7.20:1 (4.72:1 en el estado naranja activo más oscuro).
+
+**Estado:** la versión 2.0 está preparada localmente. No se hizo commit ni push, por lo que GitHub Pages todavía no recibe esta versión; para publicarla habrá que subir los cambios cuando se autorice.
