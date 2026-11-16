@@ -4,8 +4,9 @@
     --color-azul-noche: #14213D;
     --color-crema: #FAF6EF;
     --color-gris-asfalto: #5B6470;
-    --font-heading: Georgia, "Times New Roman", serif;
-    --font-body: Arial, Helvetica, sans-serif;
+    --color-amarillo-farol: #FFD166;
+    --font-heading: "Montserrat", sans-serif;
+    --font-body: "Open Sans", sans-serif;
 }
 
 body {

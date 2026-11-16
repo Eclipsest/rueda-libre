@@ -314,3 +314,33 @@ El CSS Tailwind se midió como archivo minificado local; la tabla de Bootstrap r
 - Se verificó una columna en 360 px, dos desde 768 px y ausencia de desbordamiento horizontal en 360, 768, 1024 y 1280 px. La emulación oscura muestra superficies Gris Asfalto, texto Crema y anillo de foco Amarillo Farol; en claro se mantienen los controles blancos del kit.
 - **Recepción:** por decisión del usuario, el formulario usa `mailto:info@ruedalibre.com`. Al enviar abre el cliente de correo y requiere que la persona confirme el envío allí; no es una recepción automática. No existe endpoint/backend de inscripciones en el sitio estático, así que queda pendiente configurarlo si el cliente necesita almacenamiento o confirmación automática. Durante la prueba, el evento se interceptó para no abrir el correo.
 - **Tiempo real de implementación y validación:** 19 min 56 s (17:12:06–17:31:02, hora local).
+
+## Integración entre Rueda Libre y Rueda Nocturna
+
+- Se añadió el enlace «Rueda Nocturna» a la navegación de Inicio, Tarifas y Reservas, y una cuarta diapositiva enlazada a la landing. El logo de la landing vuelve a `../index.html` y «Reserva tu bici» abre `../paginas/reservas.html`.
+- Se igualaron los seis colores entre las variables del sitio Bootstrap y `@theme` de Tailwind. Bootstrap usa Montserrat para títulos y Open Sans para el texto, las mismas fuentes cargadas por la landing desde Google Fonts. El color secundario naranja conserva texto Azul Noche para mantener contraste.
+- El pie de la landing comparte el correo y los horarios del sitio principal: lunes a viernes de 7:00 a. m. a 7:00 p. m.; sábados, domingos y festivos de 6:00 a. m. a 2:00 p. m.
+- En local se comprobó que los enlaces relativos y sus fragmentos en las cuatro páginas de producto apuntan a archivos y secciones existentes; también existen la imagen de la diapositiva y `nocturna/src/output.css`. `npm run build` finalizó correctamente.
+- En GitHub Pages el inicio y Reservas están publicados, pero `https://eclipsest.github.io/rueda-libre/nocturna/index.html` responde 404. Como el usuario indicó que no se deben hacer commits ni push, estos cambios quedan solo en el árbol local; la verificación publicada y la navegación en línea quedan pendientes de la publicación manual.
+- **Tiempo real de implementación y validación local:** 16 min 26 s (17:35:16–17:51:42, hora local).
+
+## Planes Rueda Nocturna
+
+- Se añadieron los planes Individual ($55.000 por persona), Pareja ($99.000 las dos personas) y Grupo (4 a 8; $45.000 por persona), con sus beneficios y un botón «Inscribirme».
+- La sección usa una columna por defecto y tres desde `lg:`. Las cards comparten `p-6`, borde base y altura; `flex-col` con `mt-auto` alinea los botones. Las listas usan `flex flex-col gap-3`.
+- Pareja se destaca con el texto «Más elegido», fondo Amarillo Farol suave y un borde visualmente más grueso. Para conservar el mismo box model, todas las cards mantienen `border-2` y `p-6`; un `ring-2 ring-inset` añade grosor sin cambiar sus medidas.
+- En DevTools/Computed a 1280 px las cards midieron aproximadamente 346.66–346.67 px de ancho, 423 px de alto y 24 px de padding; los botones terminaron en la misma coordenada. A 360 px se mostró una columna y `scrollWidth` igual a `clientWidth`, sin desbordamiento horizontal.
+- En modo oscuro, los fondos calculados son Gris Asfalto para Individual/Grupo y Azul Noche para Pareja; títulos y precios usan Crema. Contrastes revisados: Crema/Gris Asfalto 5.57:1, Crema/Azul Noche 14.83:1, Crema/Verde Ruta 4.93:1 y Azul Noche/Amarillo Farol 11.08:1. En claro, Verde Ruta sobre el fondo suave de Pareja alcanza 4.66:1.
+- `npm run build` finalizó correctamente; `src/output.css` minificado ocupa 27.858 bytes. Pendiente funcional: los CTA llevan a `#inscripcion`, pero el formulario actual todavía no guarda cuál plan se eligió.
+- **Tiempo real de implementación y validación:** 8 min 19 s (17:53:36–18:01:55, hora local).
+
+## Cierre de lanzamiento
+
+- Se volvió a compilar Tailwind desde `nocturna/` con `npm.cmd run build`; `src/output.css` queda minificado y mide 27.858 bytes. El CSS se conserva en GitHub Pages; `node_modules/` continúa excluido.
+- W3C Nu reportó cero errores en `nocturna/index.html` y `paginas/reservas.html`. En Reservas, los ocho mensajes de validación dejaron de ser `div` anidados en `label` y pasaron a `span`; el modal declara `role="dialog"`.
+- La búsqueda de atributos `style` en los HTML no encontró estilos en línea. Las pruebas previas de teclado y validación nativa del formulario siguen registradas en las secciones de Reserva e Inscripción.
+- Se emuló la landing con Chrome DevTools Protocol y `prefers-color-scheme` claro/oscuro. El tema oscuro quedó activo en la captura y las imágenes finales se generaron a 1280 × 960 (escritorio y oscuro) y 360 × 900 (celular).
+- Matriz final de la landing: 360 px = rutas/planes/pasos en 1/1/1 columnas, CTA visible y enlaces ocultos; 768 px = 2/1/2; 1024 px = 3/3/4; 1280 px = 3/3/4. En los cuatro anchos el documento no excedió el viewport. El sitio Bootstrap ya tenía prueba registrada a 360, 768 y 1280 px.
+- El README incorpora los enlaces de páginas, tecnologías, capturas, mediciones de frameworks, recomendación y guion de demo de tres minutos.
+- La práctica frente a un compañero y la retroalimentación no se realizaron durante esta entrega; quedan pendientes y no se atribuyen comentarios inexistentes.
+- Publicación: pendiente de subir la versión de lanzamiento a la rama configurada para GitHub Pages y comprobar en línea los enlaces y recursos.

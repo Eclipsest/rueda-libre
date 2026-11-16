@@ -13,9 +13,10 @@
 <body class="min-h-screen font-open-sans antialiased bg-crema text-azul-noche dark:bg-azul-noche dark:text-crema">
     <header class="border-b border-gris-asfalto/30 bg-azul-noche dark:border-amarillo-farol">
         <div class="flex w-full max-w-6xl flex-col items-start md:flex-row md:items-center md:justify-between mx-auto gap-4 px-5 py-5 md:gap-6 lg:px-8">
-            <a class="font-montserrat text-xl font-black tracking-tight text-crema focus:outline-none focus:ring-4 focus:ring-amarillo-farol focus:ring-offset-2 focus:ring-offset-azul-noche" href="#inicio">Rueda Libre</a>
+            <a class="font-montserrat text-xl font-black tracking-tight text-crema focus:outline-none focus:ring-4 focus:ring-amarillo-farol focus:ring-offset-2 focus:ring-offset-azul-noche" href="../index.html">Rueda Libre</a>
             <nav aria-label="Navegación principal" class="hidden flex-wrap items-center justify-center md:flex gap-4 md:gap-5 lg:gap-6 text-sm font-semibold text-crema">
                 <a class="hover:text-amarillo-farol focus:outline-none focus:ring-4 focus:ring-amarillo-farol focus:ring-offset-2 focus:ring-offset-azul-noche transition" href="#rutas">Rutas</a>
+                <a class="hover:text-amarillo-farol focus:outline-none focus:ring-4 focus:ring-amarillo-farol focus:ring-offset-2 focus:ring-offset-azul-noche transition" href="#planes">Planes</a>
                 <a class="hover:text-amarillo-farol focus:outline-none focus:ring-4 focus:ring-amarillo-farol focus:ring-offset-2 focus:ring-offset-azul-noche transition" href="#como-funciona">¿Cómo funciona?</a>
                 <a class="hover:text-amarillo-farol focus:outline-none focus:ring-4 focus:ring-amarillo-farol focus:ring-offset-2 focus:ring-offset-azul-noche transition" href="#inscripcion">Inscripción</a>
             </nav>
@@ -35,7 +36,10 @@
                         <h1 id="titulo-nocturna" class="font-montserrat text-4xl font-black leading-none tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-azul-noche dark:text-crema">Rueda Nocturna</h1>
                         <p class="max-w-2xl text-base font-medium leading-relaxed sm:text-lg lg:text-xl text-gris-asfalto dark:text-crema">Descubre Medellín en bici cuando se encienden las luces.</p>
                     </div>
-                    <a class="btn-primary focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-amarillo-farol dark:focus:ring-offset-gris-asfalto" href="#rutas">Explorar rutas</a>
+                    <div class="flex flex-wrap gap-3">
+                        <a class="btn-primary focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-amarillo-farol dark:focus:ring-offset-gris-asfalto" href="#rutas">Explorar rutas</a>
+                        <a class="btn-contrast focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-amarillo-farol dark:focus:ring-offset-gris-asfalto" href="../paginas/reservas.html">Reserva tu bici</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -136,6 +140,60 @@
                                 <a class="btn-primary focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-amarillo-farol dark:focus:ring-offset-gris-asfalto" href="../paginas/reservas.html">Reservar ahora</a>
                             </div>
                         </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="planes" aria-labelledby="planes-heading" class="w-full">
+            <div class="w-full max-w-6xl mx-auto space-y-6 px-5 sm:space-y-8 sm:px-6 lg:px-8">
+                <div class="space-y-3">
+                    <h2 id="planes-heading" class="font-montserrat text-2xl font-black tracking-tight sm:text-3xl lg:text-4xl text-azul-noche dark:text-crema">Planes Rueda Nocturna</h2>
+                    <p class="max-w-2xl text-base leading-relaxed text-gris-asfalto dark:text-crema">Elige la experiencia que mejor se adapta a tu salida.</p>
+                </div>
+                <div class="grid grid-cols-1 items-stretch gap-5 sm:gap-6 lg:grid-cols-3">
+                    <article class="flex h-full flex-col rounded-2xl border-2 border-gris-asfalto/40 bg-white p-6 shadow-lg dark:border-amarillo-farol/40 dark:bg-gris-asfalto">
+                        <h3 class="font-montserrat text-xl font-bold text-azul-noche dark:text-crema">Individual</h3>
+                        <p class="mt-4 text-3xl font-black text-verde-ruta dark:text-crema">$55.000 <span class="text-sm font-semibold">por persona</span></p>
+                        <div class="mt-6">
+                            <h4 class="text-sm font-bold uppercase tracking-widest text-azul-noche dark:text-crema">Incluye</h4>
+                            <ul class="mt-3 flex flex-col gap-3 text-sm leading-relaxed text-gris-asfalto dark:text-crema">
+                                <li class="flex items-start gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-verde-ruta dark:bg-amarillo-farol" aria-hidden="true"></span>Bicicleta y casco</li>
+                                <li class="flex items-start gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-verde-ruta dark:bg-amarillo-farol" aria-hidden="true"></span>Luces LED y chaleco</li>
+                                <li class="flex items-start gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-verde-ruta dark:bg-amarillo-farol" aria-hidden="true"></span>Guía certificado</li>
+                                <li class="flex items-start gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-verde-ruta dark:bg-amarillo-farol" aria-hidden="true"></span>Hidratación</li>
+                            </ul>
+                        </div>
+                        <div class="mt-auto pt-6"><a class="btn-primary focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-amarillo-farol dark:focus:ring-offset-gris-asfalto" href="#inscripcion">Inscribirme</a></div>
+                    </article>
+                    <article class="flex h-full flex-col rounded-2xl border-2 border-verde-ruta bg-amarillo-farol/20 p-6 shadow-xl ring-2 ring-inset ring-verde-ruta dark:border-amarillo-farol dark:bg-azul-noche dark:ring-amarillo-farol">
+                        <span class="mb-4 self-start rounded-full bg-amarillo-farol px-3 py-1 text-xs font-bold uppercase tracking-wide text-azul-noche">Más elegido</span>
+                        <h3 class="font-montserrat text-xl font-bold text-azul-noche dark:text-crema">Pareja</h3>
+                        <p class="mt-4 text-3xl font-black text-verde-ruta dark:text-crema">$99.000 <span class="text-sm font-semibold">las dos personas</span></p>
+                        <div class="mt-6">
+                            <h4 class="text-sm font-bold uppercase tracking-widest text-azul-noche dark:text-crema">Incluye</h4>
+                            <ul class="mt-3 flex flex-col gap-3 text-sm leading-relaxed text-gris-asfalto dark:text-crema">
+                                <li class="flex items-start gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-verde-ruta dark:bg-amarillo-farol" aria-hidden="true"></span>Todo lo del plan Individual</li>
+                                <li class="flex items-start gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-verde-ruta dark:bg-amarillo-farol" aria-hidden="true"></span>Foto del recorrido</li>
+                                <li class="flex items-start gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-verde-ruta dark:bg-amarillo-farol" aria-hidden="true"></span>Snack para dos</li>
+                                <li class="flex items-start gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-verde-ruta dark:bg-amarillo-farol" aria-hidden="true"></span>Prioridad en la ruta</li>
+                            </ul>
+                        </div>
+                        <div class="mt-auto pt-6"><a class="btn-primary focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche" href="#inscripcion">Inscribirme</a></div>
+                    </article>
+                    <article class="flex h-full flex-col rounded-2xl border-2 border-gris-asfalto/40 bg-white p-6 shadow-lg dark:border-amarillo-farol/40 dark:bg-gris-asfalto">
+                        <h3 class="font-montserrat text-xl font-bold text-azul-noche dark:text-crema">Grupo (4 a 8)</h3>
+                        <p class="mt-4 text-3xl font-black text-verde-ruta dark:text-crema">$45.000 <span class="text-sm font-semibold">por persona</span></p>
+                        <div class="mt-6">
+                            <h4 class="text-sm font-bold uppercase tracking-widest text-azul-noche dark:text-crema">Incluye</h4>
+                            <ul class="mt-3 flex flex-col gap-3 text-sm leading-relaxed text-gris-asfalto dark:text-crema">
+                                <li class="flex items-start gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-verde-ruta dark:bg-amarillo-farol" aria-hidden="true"></span>Todo lo del plan Individual</li>
+                                <li class="flex items-start gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-verde-ruta dark:bg-amarillo-farol" aria-hidden="true"></span>Guía exclusivo</li>
+                                <li class="flex items-start gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-verde-ruta dark:bg-amarillo-farol" aria-hidden="true"></span>Horario a elección</li>
+                                <li class="flex items-start gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-verde-ruta dark:bg-amarillo-farol" aria-hidden="true"></span>Fotos del grupo</li>
+                            </ul>
+                        </div>
+                        <div class="mt-auto pt-6"><a class="btn-primary focus:outline-none focus:ring-4 focus:ring-azul-noche focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-amarillo-farol dark:focus:ring-offset-gris-asfalto" href="#inscripcion">Inscribirme</a></div>
                     </article>
                 </div>
             </div>
@@ -283,13 +341,18 @@
                 <h2 class="font-montserrat text-sm font-bold uppercase tracking-widest text-crema">Explora</h2>
                 <ul class="space-y-2 text-sm text-crema">
                     <li><a class="hover:text-amarillo-farol transition" href="#rutas">Rutas</a></li>
+                    <li><a class="hover:text-amarillo-farol transition" href="#planes">Planes</a></li>
                     <li><a class="hover:text-amarillo-farol transition" href="#como-funciona">¿Cómo funciona?</a></li>
                     <li><a class="hover:text-amarillo-farol transition" href="#inscripcion">Inscripción</a></li>
                 </ul>
             </div>
             <div class="space-y-3">
                 <h2 class="font-montserrat text-sm font-bold uppercase tracking-widest text-crema">Contacto</h2>
-                <a class="text-sm text-crema hover:text-amarillo-farol transition" href="mailto:info@ruedalibre.com">info@ruedalibre.com</a>
+                <ul class="space-y-2 text-sm text-crema">
+                    <li><a class="hover:text-amarillo-farol transition" href="mailto:info@ruedalibre.com">info@ruedalibre.com</a></li>
+                    <li>Lunes a viernes: 7:00 a. m. - 7:00 p. m.</li>
+                    <li>Sábados, domingos y festivos: 6:00 a. m. - 2:00 p. m.</li>
+                </ul>
                 <p class="text-sm text-crema">© 2026 Rueda Libre</p>
             </div>
         </div>

@@ -4,9 +4,17 @@
     --color-azul-noche: #14213D;
     --color-crema: #FAF6EF;
     --color-gris-asfalto: #5B6470;
+    --color-amarillo-farol: #FFD166;
+    --font-heading: "Montserrat", sans-serif;
+    --font-body: "Open Sans", sans-serif;
     --bs-primary: var(--color-verde-ruta);
     --bs-primary-rgb: 30, 122, 79;
-    --bs-body-font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    --bs-secondary: var(--color-naranja-pedal);
+    --bs-secondary-rgb: 243, 154, 43;
+    --bs-warning: var(--color-amarillo-farol);
+    --bs-warning-rgb: 255, 209, 102;
+    --bs-heading-font-family: var(--font-heading);
+    --bs-body-font-family: var(--font-body);
     --bs-body-bg: var(--color-crema);
     --bs-body-color: var(--color-azul-noche);
     --bs-link-color: var(--color-verde-ruta);
@@ -59,6 +67,18 @@ main a:not(.btn):hover {
     --bs-btn-active-color: #FFFFFF;
     --bs-btn-active-bg: #145C3B;
     --bs-btn-active-border-color: #145C3B;
+}
+
+.btn-secondary {
+    --bs-btn-color: var(--color-azul-noche);
+    --bs-btn-bg: var(--color-naranja-pedal);
+    --bs-btn-border-color: var(--color-naranja-pedal);
+    --bs-btn-hover-color: var(--color-crema);
+    --bs-btn-hover-bg: var(--color-azul-noche);
+    --bs-btn-hover-border-color: var(--color-azul-noche);
+    --bs-btn-active-color: var(--color-crema);
+    --bs-btn-active-bg: var(--color-azul-noche);
+    --bs-btn-active-border-color: var(--color-azul-noche);
 }
 
 .btn-naranja {

@@ -26,6 +26,7 @@
                         <li class="nav-item"><a class="nav-link" href="../index.html"><i class="bi bi-house-door-fill me-1" aria-hidden="true"></i>Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="tarifas.html"><i class="bi bi-tag-fill me-1" aria-hidden="true"></i>Tarifas</a></li>
                         <li class="nav-item"><a class="nav-link active" href="reservas.html" aria-current="page"><i class="bi bi-calendar-check-fill me-1" aria-hidden="true"></i>Reservas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../nocturna/index.html"><i class="bi bi-moon-stars-fill me-1" aria-hidden="true"></i>Rueda Nocturna</a></li>
                     </ul>
                 </div>
             </div>
@@ -52,7 +53,7 @@
                             <label class="campo-formulario form-label d-flex flex-column gap-2" for="fecha">
                                 Fecha de alquiler
                                 <input class="form-control" type="date" id="fecha" name="fecha" min="2026-11-01" max="2026-12-31" required>
-                                <div class="invalid-feedback">Selecciona una fecha entre el 1 de noviembre y el 31 de diciembre de 2026.</div>
+                                <span class="invalid-feedback">Selecciona una fecha entre el 1 de noviembre y el 31 de diciembre de 2026.</span>
                             </label>
                         </div>
                         <div class="col-12 col-sm-6">
@@ -64,7 +65,7 @@
                                     <option value="montana">Montaña</option>
                                     <option value="electrica">Eléctrica</option>
                                 </select>
-                                <div class="invalid-feedback">Elige el tipo de bicicleta que quieres reservar.</div>
+                                <span class="invalid-feedback">Elige el tipo de bicicleta que quieres reservar.</span>
                             </label>
                         </div>
                     </div>
@@ -99,7 +100,7 @@
                                     <option value="5">5</option>
                                     <option value="6">6</option>
                                 </select>
-                                <div class="invalid-feedback">Selecciona cuántas bicicletas necesitas.</div>
+                                <span class="invalid-feedback">Selecciona cuántas bicicletas necesitas.</span>
                             </label>
                         </div>
                         <div class="col-12 col-sm-6">
@@ -112,7 +113,7 @@
                                     <option value="palmas">Reto las Palmas</option>
                                     <option value="ninguno">Ninguna ruta</option>
                                 </select>
-                                <div class="invalid-feedback">Elige un recorrido o selecciona “Ninguna ruta”.</div>
+                                <span class="invalid-feedback">Elige un recorrido o selecciona “Ninguna ruta”.</span>
                             </label>
                         </div>
                     </div>
@@ -131,26 +132,26 @@
                         <label class="campo-formulario form-label d-flex flex-column gap-2" for="nombre">
                             Nombre
                             <input class="form-control" type="text" id="nombre" name="nombre" placeholder="Nombre y apellidos" autocomplete="name" required minlength="3">
-                            <div class="invalid-feedback">Escribe tu nombre completo con al menos 3 caracteres.</div>
+                            <span class="invalid-feedback">Escribe tu nombre completo con al menos 3 caracteres.</span>
                         </label>
                         <label class="campo-formulario form-label d-flex flex-column gap-2" for="email">
                             Correo electrónico
                             <input class="form-control" type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" autocomplete="email" required>
-                            <div class="invalid-feedback">Escribe un correo válido, por ejemplo tucorreo@ejemplo.com.</div>
+                            <span class="invalid-feedback">Escribe un correo válido, por ejemplo tucorreo@ejemplo.com.</span>
                         </label>
                         <div class="row g-3">
                             <div class="col-12 col-sm-6">
                                 <label class="campo-formulario form-label d-flex flex-column gap-2" for="documento">
                                     Documento
                                     <input class="form-control" type="text" inputmode="numeric" pattern="[0-9]+" placeholder="Ej: 1040203756" id="documento" name="documento" autocomplete="off" required minlength="6" maxlength="10">
-                                    <div class="invalid-feedback">Ingresa entre 6 y 10 dígitos para tu documento, sin puntos ni espacios.</div>
+                                    <span class="invalid-feedback">Ingresa entre 6 y 10 dígitos para tu documento, sin puntos ni espacios.</span>
                                 </label>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <label class="campo-formulario form-label d-flex flex-column gap-2" for="telefono">
                                     Celular
                                     <input class="form-control" type="tel" id="telefono" name="telefono" placeholder="Debe iniciar en 3" autocomplete="tel" required minlength="10" maxlength="10" pattern="3[0-9]+">
-                                    <div class="invalid-feedback">Ingresa un celular de 10 dígitos que comience por 3.</div>
+                                    <span class="invalid-feedback">Ingresa un celular de 10 dígitos que comience por 3.</span>
                                 </label>
                             </div>
                         </div>
@@ -174,7 +175,7 @@
             </form>
             </section>
 
-            <div class="modal fade" id="politicasModal" tabindex="-1" aria-labelledby="politicasModalLabel" aria-hidden="true">
+            <div class="modal fade" id="politicasModal" tabindex="-1" role="dialog" aria-labelledby="politicasModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
