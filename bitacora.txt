@@ -211,3 +211,10 @@ Las combinaciones principales superan 4.5:1: texto Verde Ruta sobre crema 4.93:1
 - Diferencia clave: Bootstrap ofrece componentes predefinidos que se personalizan; Tailwind es utility-first y permite construir el componente combinando clases de propósito único en el marcado.
 - El prototipo incluye la campaña «Nuevo · Jueves a sábado», el título «Rueda Nocturna», su descripción, los datos de rutas y precio, y el enlace de inscripción; conserva un solo `h1` y se adapta a pantallas pequeñas.
 - Se deja el trabajo local, sin commit ni push.
+
+## CLI de Tailwind y botones de Rueda Nocturna
+
+- En `nocturna/` se instaló `tailwindcss` junto con `@tailwindcss/cli`. `src/input.css` importa Tailwind y la compilación se ejecuta en modo observación con `npm run watch`; `index.html` carga el CSS generado localmente, sin Play CDN.
+- `src/output.css` incluye utilidades encontradas en el HTML, por ejemplo `.bg-slate-950`, y no incluye `.bg-pink-500`, que no se usa en los archivos fuente. Tailwind detecta las clases presentes en las fuentes y solo genera las utilidades necesarias; por eso una clase no usada no aparece en el CSS final y el archivo compilado ocupa menos.
+- Se añadieron variantes principal, secundaria y de contorno. Cada enlace tiene un cambio `hover:` y un anillo `focus:ring-*` con separación visible al navegar con teclado; el foco no queda sin indicador al retirar el outline predeterminado.
+- `nocturna/.gitignore` excluye `node_modules/`; se incluye `src/output.css` en el repositorio para que GitHub Pages pueda servir la página sin ejecutar la CLI.
