@@ -203,3 +203,11 @@ Las páginas de inicio, tarifas, reservas y contacto se probaron en viewports de
 Las combinaciones principales superan 4.5:1: texto Verde Ruta sobre crema 4.93:1, texto blanco sobre Verde Ruta 5.31:1, y Azul Noche sobre Naranja Pedal 7.20:1 (4.72:1 en el estado naranja activo más oscuro).
 
 **Estado:** la versión 2.0 está preparada localmente. No se hizo commit ni push, por lo que GitHub Pages todavía no recibe esta versión; para publicarla habrá que subir los cambios cuando se autorice.
+
+## Prototipo Tailwind: Rueda Nocturna
+
+- En la semana 2, el botón de Bootstrap se construyó como `<a class="btn btn-primary btn-lg">Inscríbete</a>`: `btn`/`btn-primary` aportan el componente y `btn-lg` su tamaño; las variables `--bs-btn-*` dan los estados de marca.
+- Hoy, el enlace se construye como `<a class="inline-flex rounded-full bg-amber-300 px-7 py-4 font-bold text-slate-950">Inscríbete</a>` y suma utilidades `hover`/`focus-visible`; Tailwind Play CDN genera los estilos sin CSS propio.
+- Diferencia clave: Bootstrap ofrece componentes predefinidos que se personalizan; Tailwind es utility-first y permite construir el componente combinando clases de propósito único en el marcado.
+- El prototipo incluye la campaña «Nuevo · Jueves a sábado», el título «Rueda Nocturna», su descripción, los datos de rutas y precio, y el enlace de inscripción; conserva un solo `h1` y se adapta a pantallas pequeñas.
+- Se deja el trabajo local, sin commit ni push.
