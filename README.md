@@ -49,6 +49,7 @@ La landing enlaza `nocturna/src/output.css`, generado y versionado para que GitH
 
 - El sitio Bootstrap también se revisó a 360, 768 y 1280 px. La búsqueda final no encontró atributos `style` en los HTML.
 - `nocturna/src/output.css` se compiló con `--minify`; tamaño final medido: **27.858 bytes**.
+- Tras publicar, las cinco páginas principales y 20 recursos/enlaces internos de GitHub Pages respondieron sin errores 404.
 - La inscripción de la campaña usa `mailto:info@ruedalibre.com`: el navegador valida los datos y abre la aplicación de correo; no hay almacenamiento ni confirmación automática en un servidor.
 
 ## Bootstrap vs. Tailwind — decisión del MiniReto 8

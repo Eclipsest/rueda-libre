@@ -337,10 +337,10 @@ El CSS Tailwind se midió como archivo minificado local; la tabla de Bootstrap r
 ## Cierre de lanzamiento
 
 - Se volvió a compilar Tailwind desde `nocturna/` con `npm.cmd run build`; `src/output.css` queda minificado y mide 27.858 bytes. El CSS se conserva en GitHub Pages; `node_modules/` continúa excluido.
-- W3C Nu reportó cero errores en `nocturna/index.html` y `paginas/reservas.html`. En Reservas, los ocho mensajes de validación dejaron de ser `div` anidados en `label` y pasaron a `span`; el modal declara `role="dialog"`.
+- W3C Nu reportó cero errores en `nocturna/index.html` y `paginas/reservas.html`, primero en local y de nuevo en las páginas publicadas. En Reservas, los ocho mensajes de validación dejaron de ser `div` anidados en `label` y pasaron a `span`; el modal declara `role="dialog"`.
 - La búsqueda de atributos `style` en los HTML no encontró estilos en línea. Las pruebas previas de teclado y validación nativa del formulario siguen registradas en las secciones de Reserva e Inscripción.
 - Se emuló la landing con Chrome DevTools Protocol y `prefers-color-scheme` claro/oscuro. El tema oscuro quedó activo en la captura y las imágenes finales se generaron a 1280 × 960 (escritorio y oscuro) y 360 × 900 (celular).
 - Matriz final de la landing: 360 px = rutas/planes/pasos en 1/1/1 columnas, CTA visible y enlaces ocultos; 768 px = 2/1/2; 1024 px = 3/3/4; 1280 px = 3/3/4. En los cuatro anchos el documento no excedió el viewport. El sitio Bootstrap ya tenía prueba registrada a 360, 768 y 1280 px.
 - El README incorpora los enlaces de páginas, tecnologías, capturas, mediciones de frameworks, recomendación y guion de demo de tres minutos.
 - La práctica frente a un compañero y la retroalimentación no se realizaron durante esta entrega; quedan pendientes y no se atribuyen comentarios inexistentes.
-- Publicación: pendiente de subir la versión de lanzamiento a la rama configurada para GitHub Pages y comprobar en línea los enlaces y recursos.
+- Publicación: el commit de lanzamiento `d9977b3` y la sincronización con `main` quedaron en `Semana-3` y `main` (`1e3955f`). La acción de GitHub Pages terminó con éxito; se probaron 25 páginas/recursos internos con cero fallos, incluidos `nocturna/index.html`, `componentes.html` y `src/output.css`.
